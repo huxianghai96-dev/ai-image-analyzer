@@ -1,0 +1,11 @@
+# 深度学习画质评分依赖（移动端 APK / 真机打包时与 requirements.txt 一并安装）
+# 桌面：pip install -r requirements.txt -r requirements-dl.txt
+# Flet APK：pip install -r requirements.txt -r requirements-dl.txt 后再执行 flet build apk
+#
+# 默认模型 cnniqa（见 dl_scorer.py），首次推理会下载权重，需联网。
+# 可切换模型：set IQA_DL_MODEL=maniqa  (Windows) / export IQA_DL_MODEL=maniqa (Linux/macOS)
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+torchvision>=0.15.0
+pyiqa>=0.1.12

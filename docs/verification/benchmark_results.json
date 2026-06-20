@@ -1,0 +1,2310 @@
+{
+  "samples": [
+    {
+      "category": "clear",
+      "file": "test_samples\\clear\\clear_1.jpg",
+      "method": "traditional",
+      "overall": 93.2,
+      "grade": "A 优秀",
+      "elapsed_ms": 98.6,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 99.1,
+        "exposure": 96.0,
+        "noise": 95.5,
+        "contrast": 71.2
+      },
+      "dl_score": null,
+      "traditional_score": 93.24000000000001,
+      "human_expectation": "高",
+      "human_note": "综合分应 ≥ 70",
+      "raw_sharpness": 99.1,
+      "noise_corrected": false
+    },
+    {
+      "category": "clear",
+      "file": "test_samples\\clear\\clear_1.jpg",
+      "method": "dl",
+      "overall": 48.4,
+      "grade": "D 较差",
+      "elapsed_ms": 545.4,
+      "summary": "深度学习画质：画质偏差。",
+      "dimensions": {
+        "deep_learning": 48.4
+      },
+      "dl_score": 48.4,
+      "traditional_score": null,
+      "human_expectation": "高",
+      "human_note": "综合分应 ≥ 70"
+    },
+    {
+      "category": "clear",
+      "file": "test_samples\\clear\\clear_1.jpg",
+      "method": "hybrid",
+      "overall": 70.8,
+      "grade": "C 一般",
+      "elapsed_ms": 379.9,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+      "dimensions": {
+        "sharpness": 99.1,
+        "exposure": 96.0,
+        "noise": 95.5,
+        "contrast": 71.2,
+        "deep_learning": 48.4
+      },
+      "dl_score": 48.4,
+      "traditional_score": 93.24000000000001,
+      "human_expectation": "高",
+      "human_note": "综合分应 ≥ 70",
+      "raw_sharpness": 99.1,
+      "noise_corrected": false
+    },
+    {
+      "category": "clear",
+      "file": "test_samples\\clear\\clear_2.jpg",
+      "method": "traditional",
+      "overall": 93.2,
+      "grade": "A 优秀",
+      "elapsed_ms": 66.7,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 99.1,
+        "exposure": 96.0,
+        "noise": 95.5,
+        "contrast": 71.2
+      },
+      "dl_score": null,
+      "traditional_score": 93.24000000000001,
+      "human_expectation": "高",
+      "human_note": "综合分应 ≥ 70",
+      "raw_sharpness": 99.1,
+      "noise_corrected": false
+    },
+    {
+      "category": "clear",
+      "file": "test_samples\\clear\\clear_2.jpg",
+      "method": "dl",
+      "overall": 48.4,
+      "grade": "D 较差",
+      "elapsed_ms": 301.4,
+      "summary": "深度学习画质：画质偏差。",
+      "dimensions": {
+        "deep_learning": 48.4
+      },
+      "dl_score": 48.4,
+      "traditional_score": null,
+      "human_expectation": "高",
+      "human_note": "综合分应 ≥ 70"
+    },
+    {
+      "category": "clear",
+      "file": "test_samples\\clear\\clear_2.jpg",
+      "method": "hybrid",
+      "overall": 70.8,
+      "grade": "C 一般",
+      "elapsed_ms": 313.3,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+      "dimensions": {
+        "sharpness": 99.1,
+        "exposure": 96.0,
+        "noise": 95.5,
+        "contrast": 71.2,
+        "deep_learning": 48.4
+      },
+      "dl_score": 48.4,
+      "traditional_score": 93.24000000000001,
+      "human_expectation": "高",
+      "human_note": "综合分应 ≥ 70",
+      "raw_sharpness": 99.1,
+      "noise_corrected": false
+    },
+    {
+      "category": "blur",
+      "file": "test_samples\\blur\\blur_k5.jpg",
+      "method": "traditional",
+      "overall": 88.0,
+      "grade": "B 良好",
+      "elapsed_ms": 58.4,
+      "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 83.3,
+        "exposure": 96.0,
+        "noise": 97.0,
+        "contrast": 70.6
+      },
+      "dl_score": null,
+      "traditional_score": 87.995,
+      "human_expectation": "低",
+      "human_note": "综合分应随模糊加重而下降",
+      "raw_sharpness": 83.3,
+      "noise_corrected": false
+    },
+    {
+      "category": "blur",
+      "file": "test_samples\\blur\\blur_k5.jpg",
+      "method": "dl",
+      "overall": 37.7,
+      "grade": "E 很差",
+      "elapsed_ms": 268.8,
+      "summary": "深度学习画质：画质较差。",
+      "dimensions": {
+        "deep_learning": 37.7
+      },
+      "dl_score": 37.7,
+      "traditional_score": null,
+      "human_expectation": "低",
+      "human_note": "综合分应随模糊加重而下降"
+    },
+    {
+      "category": "blur",
+      "file": "test_samples\\blur\\blur_k5.jpg",
+      "method": "hybrid",
+      "overall": 62.8,
+      "grade": "C 一般",
+      "elapsed_ms": 301.5,
+      "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质较差。",
+      "dimensions": {
+        "sharpness": 83.3,
+        "exposure": 96.0,
+        "noise": 97.0,
+        "contrast": 70.6,
+        "deep_learning": 37.7
+      },
+      "dl_score": 37.7,
+      "traditional_score": 87.995,
+      "human_expectation": "低",
+      "human_note": "综合分应随模糊加重而下降",
+      "raw_sharpness": 83.3,
+      "noise_corrected": false
+    },
+    {
+      "category": "blur",
+      "file": "test_samples\\blur\\blur_k15.jpg",
+      "method": "traditional",
+      "overall": 68.9,
+      "grade": "C 一般",
+      "elapsed_ms": 54.8,
+      "summary": "清晰度：明显模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度一般。",
+      "dimensions": {
+        "sharpness": 28.8,
+        "exposure": 96.0,
+        "noise": 97.2,
+        "contrast": 70.0
+      },
+      "dl_score": null,
+      "traditional_score": 68.88,
+      "human_expectation": "低",
+      "human_note": "综合分应随模糊加重而下降",
+      "raw_sharpness": 28.8,
+      "noise_corrected": false
+    },
+    {
+      "category": "blur",
+      "file": "test_samples\\blur\\blur_k15.jpg",
+      "method": "dl",
+      "overall": 34.5,
+      "grade": "E 很差",
+      "elapsed_ms": 254.6,
+      "summary": "深度学习画质：画质较差。",
+      "dimensions": {
+        "deep_learning": 34.5
+      },
+      "dl_score": 34.5,
+      "traditional_score": null,
+      "human_expectation": "低",
+      "human_note": "综合分应随模糊加重而下降"
+    },
+    {
+      "category": "blur",
+      "file": "test_samples\\blur\\blur_k15.jpg",
+      "method": "hybrid",
+      "overall": 51.7,
+      "grade": "D 较差",
+      "elapsed_ms": 266.0,
+      "summary": "清晰度：明显模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质较差。",
+      "dimensions": {
+        "sharpness": 28.8,
+        "exposure": 96.0,
+        "noise": 97.2,
+        "contrast": 70.0,
+        "deep_learning": 34.5
+      },
+      "dl_score": 34.5,
+      "traditional_score": 68.88,
+      "human_expectation": "低",
+      "human_note": "综合分应随模糊加重而下降",
+      "raw_sharpness": 28.8,
+      "noise_corrected": false
+    },
+    {
+      "category": "blur",
+      "file": "test_samples\\blur\\blur_k31.jpg",
+      "method": "traditional",
+      "overall": 63.4,
+      "grade": "C 一般",
+      "elapsed_ms": 53.7,
+      "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度一般。",
+      "dimensions": {
+        "sharpness": 13.3,
+        "exposure": 96.0,
+        "noise": 97.3,
+        "contrast": 69.5
+      },
+      "dl_score": null,
+      "traditional_score": 63.405,
+      "human_expectation": "低",
+      "human_note": "综合分应随模糊加重而下降",
+      "raw_sharpness": 13.3,
+      "noise_corrected": false
+    },
+    {
+      "category": "blur",
+      "file": "test_samples\\blur\\blur_k31.jpg",
+      "method": "dl",
+      "overall": 34.8,
+      "grade": "E 很差",
+      "elapsed_ms": 233.8,
+      "summary": "深度学习画质：画质较差。",
+      "dimensions": {
+        "deep_learning": 34.8
+      },
+      "dl_score": 34.8,
+      "traditional_score": null,
+      "human_expectation": "低",
+      "human_note": "综合分应随模糊加重而下降"
+    },
+    {
+      "category": "blur",
+      "file": "test_samples\\blur\\blur_k31.jpg",
+      "method": "hybrid",
+      "overall": 49.1,
+      "grade": "D 较差",
+      "elapsed_ms": 262.2,
+      "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质较差。",
+      "dimensions": {
+        "sharpness": 13.3,
+        "exposure": 96.0,
+        "noise": 97.3,
+        "contrast": 69.5,
+        "deep_learning": 34.8
+      },
+      "dl_score": 34.8,
+      "traditional_score": 63.405,
+      "human_expectation": "低",
+      "human_note": "综合分应随模糊加重而下降",
+      "raw_sharpness": 13.3,
+      "noise_corrected": false
+    },
+    {
+      "category": "overexpose",
+      "file": "test_samples\\overexpose\\over_1.jpg",
+      "method": "traditional",
+      "overall": 80.6,
+      "grade": "B 良好",
+      "elapsed_ms": 49.1,
+      "summary": "清晰度：非常清晰；曝光：过曝；噪点：噪点极低；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 100.0,
+        "exposure": 40.4,
+        "noise": 95.4,
+        "contrast": 78.0
+      },
+      "dl_score": null,
+      "traditional_score": 80.65,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低",
+      "raw_sharpness": 100.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "overexpose",
+      "file": "test_samples\\overexpose\\over_1.jpg",
+      "method": "dl",
+      "overall": 51.0,
+      "grade": "D 较差",
+      "elapsed_ms": 238.9,
+      "summary": "深度学习画质：画质偏差。",
+      "dimensions": {
+        "deep_learning": 51.0
+      },
+      "dl_score": 51.0,
+      "traditional_score": null,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低"
+    },
+    {
+      "category": "overexpose",
+      "file": "test_samples\\overexpose\\over_1.jpg",
+      "method": "hybrid",
+      "overall": 65.8,
+      "grade": "C 一般",
+      "elapsed_ms": 274.6,
+      "summary": "清晰度：非常清晰；曝光：过曝；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+      "dimensions": {
+        "sharpness": 100.0,
+        "exposure": 40.4,
+        "noise": 95.4,
+        "contrast": 78.0,
+        "deep_learning": 51.0
+      },
+      "dl_score": 51.0,
+      "traditional_score": 80.65,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低",
+      "raw_sharpness": 100.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "overexpose",
+      "file": "test_samples\\overexpose\\over_2.jpg",
+      "method": "traditional",
+      "overall": 69.4,
+      "grade": "C 一般",
+      "elapsed_ms": 50.8,
+      "summary": "清晰度：非常清晰；曝光：过曝；噪点：噪点极低；对比度：对比度一般。",
+      "dimensions": {
+        "sharpness": 100.0,
+        "exposure": 0.0,
+        "noise": 96.1,
+        "contrast": 68.9
+      },
+      "dl_score": null,
+      "traditional_score": 69.36,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低",
+      "raw_sharpness": 100.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "overexpose",
+      "file": "test_samples\\overexpose\\over_2.jpg",
+      "method": "dl",
+      "overall": 52.6,
+      "grade": "D 较差",
+      "elapsed_ms": 236.3,
+      "summary": "深度学习画质：画质偏差。",
+      "dimensions": {
+        "deep_learning": 52.6
+      },
+      "dl_score": 52.6,
+      "traditional_score": null,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低"
+    },
+    {
+      "category": "overexpose",
+      "file": "test_samples\\overexpose\\over_2.jpg",
+      "method": "hybrid",
+      "overall": 61.0,
+      "grade": "C 一般",
+      "elapsed_ms": 264.6,
+      "summary": "清晰度：非常清晰；曝光：过曝；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质偏差。",
+      "dimensions": {
+        "sharpness": 100.0,
+        "exposure": 0.0,
+        "noise": 96.1,
+        "contrast": 68.9,
+        "deep_learning": 52.6
+      },
+      "dl_score": 52.6,
+      "traditional_score": 69.36,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低",
+      "raw_sharpness": 100.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "underexpose",
+      "file": "test_samples\\underexpose\\under_1.jpg",
+      "method": "traditional",
+      "overall": 70.6,
+      "grade": "C 一般",
+      "elapsed_ms": 45.2,
+      "summary": "清晰度：基本清晰；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低。",
+      "dimensions": {
+        "sharpness": 75.2,
+        "exposure": 62.3,
+        "noise": 97.0,
+        "contrast": 29.4
+      },
+      "dl_score": null,
+      "traditional_score": 70.55499999999999,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低",
+      "raw_sharpness": 75.2,
+      "noise_corrected": false
+    },
+    {
+      "category": "underexpose",
+      "file": "test_samples\\underexpose\\under_1.jpg",
+      "method": "dl",
+      "overall": 0.0,
+      "grade": "E 很差",
+      "elapsed_ms": 233.8,
+      "summary": "深度学习画质：画质较差。",
+      "dimensions": {
+        "deep_learning": 0.0
+      },
+      "dl_score": 0.0,
+      "traditional_score": null,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低"
+    },
+    {
+      "category": "underexpose",
+      "file": "test_samples\\underexpose\\under_1.jpg",
+      "method": "hybrid",
+      "overall": 35.3,
+      "grade": "E 很差",
+      "elapsed_ms": 268.7,
+      "summary": "清晰度：基本清晰；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质较差。",
+      "dimensions": {
+        "sharpness": 75.2,
+        "exposure": 62.3,
+        "noise": 97.0,
+        "contrast": 29.4,
+        "deep_learning": 0.0
+      },
+      "dl_score": 0.0,
+      "traditional_score": 70.55499999999999,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低",
+      "raw_sharpness": 75.2,
+      "noise_corrected": false
+    },
+    {
+      "category": "underexpose",
+      "file": "test_samples\\underexpose\\under_2.jpg",
+      "method": "traditional",
+      "overall": 79.2,
+      "grade": "B 良好",
+      "elapsed_ms": 46.6,
+      "summary": "清晰度：清晰；曝光：整体偏暗；噪点：噪点极低；对比度：对比度一般。",
+      "dimensions": {
+        "sharpness": 88.1,
+        "exposure": 71.9,
+        "noise": 96.7,
+        "contrast": 41.5
+      },
+      "dl_score": null,
+      "traditional_score": 79.21,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低",
+      "raw_sharpness": 88.1,
+      "noise_corrected": false
+    },
+    {
+      "category": "underexpose",
+      "file": "test_samples\\underexpose\\under_2.jpg",
+      "method": "dl",
+      "overall": 20.7,
+      "grade": "E 很差",
+      "elapsed_ms": 234.9,
+      "summary": "深度学习画质：画质较差。",
+      "dimensions": {
+        "deep_learning": 20.7
+      },
+      "dl_score": 20.7,
+      "traditional_score": null,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低"
+    },
+    {
+      "category": "underexpose",
+      "file": "test_samples\\underexpose\\under_2.jpg",
+      "method": "hybrid",
+      "overall": 50.0,
+      "grade": "D 较差",
+      "elapsed_ms": 262.0,
+      "summary": "清晰度：清晰；曝光：整体偏暗；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质较差。",
+      "dimensions": {
+        "sharpness": 88.1,
+        "exposure": 71.9,
+        "noise": 96.7,
+        "contrast": 41.5,
+        "deep_learning": 20.7
+      },
+      "dl_score": 20.7,
+      "traditional_score": 79.21,
+      "human_expectation": "低",
+      "human_note": "曝光维度分应明显偏低",
+      "raw_sharpness": 88.1,
+      "noise_corrected": false
+    },
+    {
+      "category": "noise",
+      "file": "test_samples\\noise\\noise_s15.jpg",
+      "method": "traditional",
+      "overall": 89.3,
+      "grade": "B 良好",
+      "elapsed_ms": 50.6,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 100.0,
+        "exposure": 96.2,
+        "noise": 77.8,
+        "contrast": 71.7
+      },
+      "dl_score": null,
+      "traditional_score": 89.255,
+      "human_expectation": "低",
+      "human_note": "噪点维度分应随 sigma 下降",
+      "raw_sharpness": 100.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "noise",
+      "file": "test_samples\\noise\\noise_s15.jpg",
+      "method": "dl",
+      "overall": 53.1,
+      "grade": "D 较差",
+      "elapsed_ms": 234.5,
+      "summary": "深度学习画质：画质偏差。",
+      "dimensions": {
+        "deep_learning": 53.1
+      },
+      "dl_score": 53.1,
+      "traditional_score": null,
+      "human_expectation": "低",
+      "human_note": "噪点维度分应随 sigma 下降"
+    },
+    {
+      "category": "noise",
+      "file": "test_samples\\noise\\noise_s15.jpg",
+      "method": "hybrid",
+      "overall": 71.2,
+      "grade": "C 一般",
+      "elapsed_ms": 273.2,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好；深度学习画质：画质偏差。",
+      "dimensions": {
+        "sharpness": 100.0,
+        "exposure": 96.2,
+        "noise": 77.8,
+        "contrast": 71.7,
+        "deep_learning": 53.1
+      },
+      "dl_score": 53.1,
+      "traditional_score": 89.255,
+      "human_expectation": "低",
+      "human_note": "噪点维度分应随 sigma 下降",
+      "raw_sharpness": 100.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "noise",
+      "file": "test_samples\\noise\\noise_s30.jpg",
+      "method": "traditional",
+      "overall": 80.4,
+      "grade": "B 良好",
+      "elapsed_ms": 59.3,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 87.0,
+        "exposure": 96.2,
+        "noise": 59.6,
+        "contrast": 73.0
+      },
+      "dl_score": null,
+      "traditional_score": 80.35000000000001,
+      "human_expectation": "低",
+      "human_note": "噪点维度分应随 sigma 下降",
+      "raw_sharpness": 100.0,
+      "noise_corrected": true
+    },
+    {
+      "category": "noise",
+      "file": "test_samples\\noise\\noise_s30.jpg",
+      "method": "dl",
+      "overall": 58.3,
+      "grade": "D 较差",
+      "elapsed_ms": 238.6,
+      "summary": "深度学习画质：画质一般。",
+      "dimensions": {
+        "deep_learning": 58.3
+      },
+      "dl_score": 58.3,
+      "traditional_score": null,
+      "human_expectation": "低",
+      "human_note": "噪点维度分应随 sigma 下降"
+    },
+    {
+      "category": "noise",
+      "file": "test_samples\\noise\\noise_s30.jpg",
+      "method": "hybrid",
+      "overall": 69.3,
+      "grade": "C 一般",
+      "elapsed_ms": 275.0,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好；深度学习画质：画质一般。",
+      "dimensions": {
+        "sharpness": 87.0,
+        "exposure": 96.2,
+        "noise": 59.6,
+        "contrast": 73.0,
+        "deep_learning": 58.3
+      },
+      "dl_score": 58.3,
+      "traditional_score": 80.35000000000001,
+      "human_expectation": "低",
+      "human_note": "噪点维度分应随 sigma 下降",
+      "raw_sharpness": 100.0,
+      "noise_corrected": true
+    },
+    {
+      "category": "noise",
+      "file": "test_samples\\noise\\noise_s50.jpg",
+      "method": "traditional",
+      "overall": 68.7,
+      "grade": "C 一般",
+      "elapsed_ms": 57.2,
+      "summary": "清晰度：非常清晰（噪点干扰已校正）；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 65.5,
+        "exposure": 96.3,
+        "noise": 41.7,
+        "contrast": 75.1
+      },
+      "dl_score": null,
+      "traditional_score": 68.69,
+      "human_expectation": "低",
+      "human_note": "噪点维度分应随 sigma 下降",
+      "raw_sharpness": 100.0,
+      "noise_corrected": true
+    },
+    {
+      "category": "noise",
+      "file": "test_samples\\noise\\noise_s50.jpg",
+      "method": "dl",
+      "overall": 64.9,
+      "grade": "C 一般",
+      "elapsed_ms": 251.0,
+      "summary": "深度学习画质：画质一般。",
+      "dimensions": {
+        "deep_learning": 64.9
+      },
+      "dl_score": 64.9,
+      "traditional_score": null,
+      "human_expectation": "低",
+      "human_note": "噪点维度分应随 sigma 下降"
+    },
+    {
+      "category": "noise",
+      "file": "test_samples\\noise\\noise_s50.jpg",
+      "method": "hybrid",
+      "overall": 66.8,
+      "grade": "C 一般",
+      "elapsed_ms": 281.7,
+      "summary": "清晰度：非常清晰（噪点干扰已校正）；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。",
+      "dimensions": {
+        "sharpness": 65.5,
+        "exposure": 96.3,
+        "noise": 41.7,
+        "contrast": 75.1,
+        "deep_learning": 64.9
+      },
+      "dl_score": 64.9,
+      "traditional_score": 68.69,
+      "human_expectation": "低",
+      "human_note": "噪点维度分应随 sigma 下降",
+      "raw_sharpness": 100.0,
+      "noise_corrected": true
+    },
+    {
+      "category": "large",
+      "file": "test_samples\\large\\large_12mp.jpg",
+      "method": "traditional",
+      "overall": 88.8,
+      "grade": "B 良好",
+      "elapsed_ms": 115.4,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 100.0,
+        "exposure": 96.0,
+        "noise": 76.8,
+        "contrast": 70.7
+      },
+      "dl_score": null,
+      "traditional_score": 88.805,
+      "human_expectation": "中",
+      "human_note": "大图耗时可放宽，但应 < 2000ms",
+      "raw_sharpness": 100.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "large",
+      "file": "test_samples\\large\\large_12mp.jpg",
+      "method": "dl",
+      "overall": 49.3,
+      "grade": "D 较差",
+      "elapsed_ms": 305.4,
+      "summary": "深度学习画质：画质偏差。",
+      "dimensions": {
+        "deep_learning": 49.3
+      },
+      "dl_score": 49.3,
+      "traditional_score": null,
+      "human_expectation": "中",
+      "human_note": "大图耗时可放宽，但应 < 2000ms"
+    },
+    {
+      "category": "large",
+      "file": "test_samples\\large\\large_12mp.jpg",
+      "method": "hybrid",
+      "overall": 69.1,
+      "grade": "C 一般",
+      "elapsed_ms": 345.2,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好；深度学习画质：画质偏差。",
+      "dimensions": {
+        "sharpness": 100.0,
+        "exposure": 96.0,
+        "noise": 76.8,
+        "contrast": 70.7,
+        "deep_learning": 49.3
+      },
+      "dl_score": 49.3,
+      "traditional_score": 88.805,
+      "human_expectation": "中",
+      "human_note": "大图耗时可放宽，但应 < 2000ms",
+      "raw_sharpness": 100.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "counterexample",
+      "file": "test_samples\\counterexample\\noise_masquerade_sharp.jpg",
+      "method": "traditional",
+      "overall": 73.3,
+      "grade": "C 一般",
+      "elapsed_ms": 60.9,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 74.8,
+        "exposure": 96.2,
+        "noise": 47.7,
+        "contrast": 74.0
+      },
+      "dl_score": null,
+      "traditional_score": 73.255,
+      "human_expectation": "失准",
+      "human_note": "清晰度可能虚高（噪点被当作边缘），综合分与主观不符",
+      "raw_sharpness": 100.0,
+      "noise_corrected": true
+    },
+    {
+      "category": "counterexample",
+      "file": "test_samples\\counterexample\\noise_masquerade_sharp.jpg",
+      "method": "dl",
+      "overall": 61.4,
+      "grade": "C 一般",
+      "elapsed_ms": 266.6,
+      "summary": "深度学习画质：画质一般。",
+      "dimensions": {
+        "deep_learning": 61.4
+      },
+      "dl_score": 61.4,
+      "traditional_score": null,
+      "human_expectation": "失准",
+      "human_note": "清晰度可能虚高（噪点被当作边缘），综合分与主观不符"
+    },
+    {
+      "category": "counterexample",
+      "file": "test_samples\\counterexample\\noise_masquerade_sharp.jpg",
+      "method": "hybrid",
+      "overall": 67.3,
+      "grade": "C 一般",
+      "elapsed_ms": 274.8,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。",
+      "dimensions": {
+        "sharpness": 74.8,
+        "exposure": 96.2,
+        "noise": 47.7,
+        "contrast": 74.0,
+        "deep_learning": 61.4
+      },
+      "dl_score": 61.4,
+      "traditional_score": 73.255,
+      "human_expectation": "失准",
+      "human_note": "清晰度可能虚高（噪点被当作边缘），综合分与主观不符",
+      "raw_sharpness": 100.0,
+      "noise_corrected": true
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.png",
+      "method": "traditional",
+      "overall": 93.3,
+      "grade": "A 优秀",
+      "elapsed_ms": 91.0,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 99.0,
+        "exposure": 96.0,
+        "noise": 95.7,
+        "contrast": 71.2
+      },
+      "dl_score": null,
+      "traditional_score": 93.255,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近",
+      "raw_sharpness": 99.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.png",
+      "method": "dl",
+      "overall": 47.7,
+      "grade": "D 较差",
+      "elapsed_ms": 267.4,
+      "summary": "深度学习画质：画质偏差。",
+      "dimensions": {
+        "deep_learning": 47.7
+      },
+      "dl_score": 47.7,
+      "traditional_score": null,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近"
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.png",
+      "method": "hybrid",
+      "overall": 70.5,
+      "grade": "C 一般",
+      "elapsed_ms": 293.5,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+      "dimensions": {
+        "sharpness": 99.0,
+        "exposure": 96.0,
+        "noise": 95.7,
+        "contrast": 71.2,
+        "deep_learning": 47.7
+      },
+      "dl_score": 47.7,
+      "traditional_score": 93.255,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近",
+      "raw_sharpness": 99.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.webp",
+      "method": "traditional",
+      "overall": 93.3,
+      "grade": "A 优秀",
+      "elapsed_ms": 70.4,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 99.0,
+        "exposure": 96.0,
+        "noise": 95.7,
+        "contrast": 71.2
+      },
+      "dl_score": null,
+      "traditional_score": 93.255,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近",
+      "raw_sharpness": 99.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.webp",
+      "method": "dl",
+      "overall": 47.7,
+      "grade": "D 较差",
+      "elapsed_ms": 268.4,
+      "summary": "深度学习画质：画质偏差。",
+      "dimensions": {
+        "deep_learning": 47.7
+      },
+      "dl_score": 47.7,
+      "traditional_score": null,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近"
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.webp",
+      "method": "hybrid",
+      "overall": 70.5,
+      "grade": "C 一般",
+      "elapsed_ms": 304.9,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+      "dimensions": {
+        "sharpness": 99.0,
+        "exposure": 96.0,
+        "noise": 95.7,
+        "contrast": 71.2,
+        "deep_learning": 47.7
+      },
+      "dl_score": 47.7,
+      "traditional_score": 93.255,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近",
+      "raw_sharpness": 99.0,
+      "noise_corrected": false
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.jpg",
+      "method": "traditional",
+      "overall": 93.4,
+      "grade": "A 优秀",
+      "elapsed_ms": 58.5,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 99.4,
+        "exposure": 96.0,
+        "noise": 95.9,
+        "contrast": 71.2
+      },
+      "dl_score": null,
+      "traditional_score": 93.445,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近",
+      "raw_sharpness": 99.4,
+      "noise_corrected": false
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.jpg",
+      "method": "dl",
+      "overall": 48.8,
+      "grade": "D 较差",
+      "elapsed_ms": 246.3,
+      "summary": "深度学习画质：画质偏差。",
+      "dimensions": {
+        "deep_learning": 48.8
+      },
+      "dl_score": 48.8,
+      "traditional_score": null,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近"
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.jpg",
+      "method": "hybrid",
+      "overall": 71.1,
+      "grade": "C 一般",
+      "elapsed_ms": 296.1,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+      "dimensions": {
+        "sharpness": 99.4,
+        "exposure": 96.0,
+        "noise": 95.9,
+        "contrast": 71.2,
+        "deep_learning": 48.8
+      },
+      "dl_score": 48.8,
+      "traditional_score": 93.445,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近",
+      "raw_sharpness": 99.4,
+      "noise_corrected": false
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.heic",
+      "method": "traditional",
+      "overall": 93.1,
+      "grade": "A 优秀",
+      "elapsed_ms": 131.7,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+      "dimensions": {
+        "sharpness": 98.2,
+        "exposure": 96.0,
+        "noise": 96.2,
+        "contrast": 71.2
+      },
+      "dl_score": null,
+      "traditional_score": 93.1,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近",
+      "raw_sharpness": 98.2,
+      "noise_corrected": false
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.heic",
+      "method": "dl",
+      "overall": 47.0,
+      "grade": "D 较差",
+      "elapsed_ms": 302.5,
+      "summary": "深度学习画质：画质偏差。",
+      "dimensions": {
+        "deep_learning": 47.0
+      },
+      "dl_score": 47.0,
+      "traditional_score": null,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近"
+    },
+    {
+      "category": "formats",
+      "file": "test_samples\\formats\\sample.heic",
+      "method": "hybrid",
+      "overall": 70.0,
+      "grade": "C 一般",
+      "elapsed_ms": 320.4,
+      "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+      "dimensions": {
+        "sharpness": 98.2,
+        "exposure": 96.0,
+        "noise": 96.2,
+        "contrast": 71.2,
+        "deep_learning": 47.0
+      },
+      "dl_score": 47.0,
+      "traditional_score": 93.1,
+      "human_expectation": "一致",
+      "human_note": "同内容不同格式分数应接近",
+      "raw_sharpness": 98.2,
+      "noise_corrected": false
+    }
+  ],
+  "summary": {
+    "traditional": {
+      "clear": {
+        "entries": [
+          {
+            "category": "clear",
+            "file": "test_samples\\clear\\clear_1.jpg",
+            "method": "traditional",
+            "overall": 93.2,
+            "grade": "A 优秀",
+            "elapsed_ms": 98.6,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 99.1,
+              "exposure": 96.0,
+              "noise": 95.5,
+              "contrast": 71.2
+            },
+            "dl_score": null,
+            "traditional_score": 93.24000000000001,
+            "human_expectation": "高",
+            "human_note": "综合分应 ≥ 70",
+            "raw_sharpness": 99.1,
+            "noise_corrected": false
+          },
+          {
+            "category": "clear",
+            "file": "test_samples\\clear\\clear_2.jpg",
+            "method": "traditional",
+            "overall": 93.2,
+            "grade": "A 优秀",
+            "elapsed_ms": 66.7,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 99.1,
+              "exposure": 96.0,
+              "noise": 95.5,
+              "contrast": 71.2
+            },
+            "dl_score": null,
+            "traditional_score": 93.24000000000001,
+            "human_expectation": "高",
+            "human_note": "综合分应 ≥ 70",
+            "raw_sharpness": 99.1,
+            "noise_corrected": false
+          }
+        ],
+        "count": 2,
+        "avg_overall": 93.2,
+        "avg_elapsed_ms": 82.7
+      },
+      "blur": {
+        "entries": [
+          {
+            "category": "blur",
+            "file": "test_samples\\blur\\blur_k5.jpg",
+            "method": "traditional",
+            "overall": 88.0,
+            "grade": "B 良好",
+            "elapsed_ms": 58.4,
+            "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 83.3,
+              "exposure": 96.0,
+              "noise": 97.0,
+              "contrast": 70.6
+            },
+            "dl_score": null,
+            "traditional_score": 87.995,
+            "human_expectation": "低",
+            "human_note": "综合分应随模糊加重而下降",
+            "raw_sharpness": 83.3,
+            "noise_corrected": false
+          },
+          {
+            "category": "blur",
+            "file": "test_samples\\blur\\blur_k15.jpg",
+            "method": "traditional",
+            "overall": 68.9,
+            "grade": "C 一般",
+            "elapsed_ms": 54.8,
+            "summary": "清晰度：明显模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度一般。",
+            "dimensions": {
+              "sharpness": 28.8,
+              "exposure": 96.0,
+              "noise": 97.2,
+              "contrast": 70.0
+            },
+            "dl_score": null,
+            "traditional_score": 68.88,
+            "human_expectation": "低",
+            "human_note": "综合分应随模糊加重而下降",
+            "raw_sharpness": 28.8,
+            "noise_corrected": false
+          },
+          {
+            "category": "blur",
+            "file": "test_samples\\blur\\blur_k31.jpg",
+            "method": "traditional",
+            "overall": 63.4,
+            "grade": "C 一般",
+            "elapsed_ms": 53.7,
+            "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度一般。",
+            "dimensions": {
+              "sharpness": 13.3,
+              "exposure": 96.0,
+              "noise": 97.3,
+              "contrast": 69.5
+            },
+            "dl_score": null,
+            "traditional_score": 63.405,
+            "human_expectation": "低",
+            "human_note": "综合分应随模糊加重而下降",
+            "raw_sharpness": 13.3,
+            "noise_corrected": false
+          }
+        ],
+        "count": 3,
+        "avg_overall": 73.4,
+        "avg_elapsed_ms": 55.6
+      },
+      "overexpose": {
+        "entries": [
+          {
+            "category": "overexpose",
+            "file": "test_samples\\overexpose\\over_1.jpg",
+            "method": "traditional",
+            "overall": 80.6,
+            "grade": "B 良好",
+            "elapsed_ms": 49.1,
+            "summary": "清晰度：非常清晰；曝光：过曝；噪点：噪点极低；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 100.0,
+              "exposure": 40.4,
+              "noise": 95.4,
+              "contrast": 78.0
+            },
+            "dl_score": null,
+            "traditional_score": 80.65,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低",
+            "raw_sharpness": 100.0,
+            "noise_corrected": false
+          },
+          {
+            "category": "overexpose",
+            "file": "test_samples\\overexpose\\over_2.jpg",
+            "method": "traditional",
+            "overall": 69.4,
+            "grade": "C 一般",
+            "elapsed_ms": 50.8,
+            "summary": "清晰度：非常清晰；曝光：过曝；噪点：噪点极低；对比度：对比度一般。",
+            "dimensions": {
+              "sharpness": 100.0,
+              "exposure": 0.0,
+              "noise": 96.1,
+              "contrast": 68.9
+            },
+            "dl_score": null,
+            "traditional_score": 69.36,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低",
+            "raw_sharpness": 100.0,
+            "noise_corrected": false
+          }
+        ],
+        "count": 2,
+        "avg_overall": 75.0,
+        "avg_elapsed_ms": 50.0
+      },
+      "underexpose": {
+        "entries": [
+          {
+            "category": "underexpose",
+            "file": "test_samples\\underexpose\\under_1.jpg",
+            "method": "traditional",
+            "overall": 70.6,
+            "grade": "C 一般",
+            "elapsed_ms": 45.2,
+            "summary": "清晰度：基本清晰；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低。",
+            "dimensions": {
+              "sharpness": 75.2,
+              "exposure": 62.3,
+              "noise": 97.0,
+              "contrast": 29.4
+            },
+            "dl_score": null,
+            "traditional_score": 70.55499999999999,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低",
+            "raw_sharpness": 75.2,
+            "noise_corrected": false
+          },
+          {
+            "category": "underexpose",
+            "file": "test_samples\\underexpose\\under_2.jpg",
+            "method": "traditional",
+            "overall": 79.2,
+            "grade": "B 良好",
+            "elapsed_ms": 46.6,
+            "summary": "清晰度：清晰；曝光：整体偏暗；噪点：噪点极低；对比度：对比度一般。",
+            "dimensions": {
+              "sharpness": 88.1,
+              "exposure": 71.9,
+              "noise": 96.7,
+              "contrast": 41.5
+            },
+            "dl_score": null,
+            "traditional_score": 79.21,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低",
+            "raw_sharpness": 88.1,
+            "noise_corrected": false
+          }
+        ],
+        "count": 2,
+        "avg_overall": 74.9,
+        "avg_elapsed_ms": 45.9
+      },
+      "noise": {
+        "entries": [
+          {
+            "category": "noise",
+            "file": "test_samples\\noise\\noise_s15.jpg",
+            "method": "traditional",
+            "overall": 89.3,
+            "grade": "B 良好",
+            "elapsed_ms": 50.6,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 100.0,
+              "exposure": 96.2,
+              "noise": 77.8,
+              "contrast": 71.7
+            },
+            "dl_score": null,
+            "traditional_score": 89.255,
+            "human_expectation": "低",
+            "human_note": "噪点维度分应随 sigma 下降",
+            "raw_sharpness": 100.0,
+            "noise_corrected": false
+          },
+          {
+            "category": "noise",
+            "file": "test_samples\\noise\\noise_s30.jpg",
+            "method": "traditional",
+            "overall": 80.4,
+            "grade": "B 良好",
+            "elapsed_ms": 59.3,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 87.0,
+              "exposure": 96.2,
+              "noise": 59.6,
+              "contrast": 73.0
+            },
+            "dl_score": null,
+            "traditional_score": 80.35000000000001,
+            "human_expectation": "低",
+            "human_note": "噪点维度分应随 sigma 下降",
+            "raw_sharpness": 100.0,
+            "noise_corrected": true
+          },
+          {
+            "category": "noise",
+            "file": "test_samples\\noise\\noise_s50.jpg",
+            "method": "traditional",
+            "overall": 68.7,
+            "grade": "C 一般",
+            "elapsed_ms": 57.2,
+            "summary": "清晰度：非常清晰（噪点干扰已校正）；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 65.5,
+              "exposure": 96.3,
+              "noise": 41.7,
+              "contrast": 75.1
+            },
+            "dl_score": null,
+            "traditional_score": 68.69,
+            "human_expectation": "低",
+            "human_note": "噪点维度分应随 sigma 下降",
+            "raw_sharpness": 100.0,
+            "noise_corrected": true
+          }
+        ],
+        "count": 3,
+        "avg_overall": 79.5,
+        "avg_elapsed_ms": 55.7
+      },
+      "large": {
+        "entries": [
+          {
+            "category": "large",
+            "file": "test_samples\\large\\large_12mp.jpg",
+            "method": "traditional",
+            "overall": 88.8,
+            "grade": "B 良好",
+            "elapsed_ms": 115.4,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 100.0,
+              "exposure": 96.0,
+              "noise": 76.8,
+              "contrast": 70.7
+            },
+            "dl_score": null,
+            "traditional_score": 88.805,
+            "human_expectation": "中",
+            "human_note": "大图耗时可放宽，但应 < 2000ms",
+            "raw_sharpness": 100.0,
+            "noise_corrected": false
+          }
+        ],
+        "count": 1,
+        "avg_overall": 88.8,
+        "avg_elapsed_ms": 115.4
+      },
+      "counterexample": {
+        "entries": [
+          {
+            "category": "counterexample",
+            "file": "test_samples\\counterexample\\noise_masquerade_sharp.jpg",
+            "method": "traditional",
+            "overall": 73.3,
+            "grade": "C 一般",
+            "elapsed_ms": 60.9,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 74.8,
+              "exposure": 96.2,
+              "noise": 47.7,
+              "contrast": 74.0
+            },
+            "dl_score": null,
+            "traditional_score": 73.255,
+            "human_expectation": "失准",
+            "human_note": "清晰度可能虚高（噪点被当作边缘），综合分与主观不符",
+            "raw_sharpness": 100.0,
+            "noise_corrected": true
+          }
+        ],
+        "count": 1,
+        "avg_overall": 73.3,
+        "avg_elapsed_ms": 60.9
+      },
+      "formats": {
+        "entries": [
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.png",
+            "method": "traditional",
+            "overall": 93.3,
+            "grade": "A 优秀",
+            "elapsed_ms": 91.0,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 99.0,
+              "exposure": 96.0,
+              "noise": 95.7,
+              "contrast": 71.2
+            },
+            "dl_score": null,
+            "traditional_score": 93.255,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近",
+            "raw_sharpness": 99.0,
+            "noise_corrected": false
+          },
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.webp",
+            "method": "traditional",
+            "overall": 93.3,
+            "grade": "A 优秀",
+            "elapsed_ms": 70.4,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 99.0,
+              "exposure": 96.0,
+              "noise": 95.7,
+              "contrast": 71.2
+            },
+            "dl_score": null,
+            "traditional_score": 93.255,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近",
+            "raw_sharpness": 99.0,
+            "noise_corrected": false
+          },
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.jpg",
+            "method": "traditional",
+            "overall": 93.4,
+            "grade": "A 优秀",
+            "elapsed_ms": 58.5,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 99.4,
+              "exposure": 96.0,
+              "noise": 95.9,
+              "contrast": 71.2
+            },
+            "dl_score": null,
+            "traditional_score": 93.445,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近",
+            "raw_sharpness": 99.4,
+            "noise_corrected": false
+          },
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.heic",
+            "method": "traditional",
+            "overall": 93.1,
+            "grade": "A 优秀",
+            "elapsed_ms": 131.7,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
+            "dimensions": {
+              "sharpness": 98.2,
+              "exposure": 96.0,
+              "noise": 96.2,
+              "contrast": 71.2
+            },
+            "dl_score": null,
+            "traditional_score": 93.1,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近",
+            "raw_sharpness": 98.2,
+            "noise_corrected": false
+          }
+        ],
+        "count": 4,
+        "avg_overall": 93.3,
+        "avg_elapsed_ms": 87.9
+      }
+    },
+    "dl": {
+      "clear": {
+        "entries": [
+          {
+            "category": "clear",
+            "file": "test_samples\\clear\\clear_1.jpg",
+            "method": "dl",
+            "overall": 48.4,
+            "grade": "D 较差",
+            "elapsed_ms": 545.4,
+            "summary": "深度学习画质：画质偏差。",
+            "dimensions": {
+              "deep_learning": 48.4
+            },
+            "dl_score": 48.4,
+            "traditional_score": null,
+            "human_expectation": "高",
+            "human_note": "综合分应 ≥ 70"
+          },
+          {
+            "category": "clear",
+            "file": "test_samples\\clear\\clear_2.jpg",
+            "method": "dl",
+            "overall": 48.4,
+            "grade": "D 较差",
+            "elapsed_ms": 301.4,
+            "summary": "深度学习画质：画质偏差。",
+            "dimensions": {
+              "deep_learning": 48.4
+            },
+            "dl_score": 48.4,
+            "traditional_score": null,
+            "human_expectation": "高",
+            "human_note": "综合分应 ≥ 70"
+          }
+        ],
+        "count": 2,
+        "avg_overall": 48.4,
+        "avg_elapsed_ms": 423.4
+      },
+      "blur": {
+        "entries": [
+          {
+            "category": "blur",
+            "file": "test_samples\\blur\\blur_k5.jpg",
+            "method": "dl",
+            "overall": 37.7,
+            "grade": "E 很差",
+            "elapsed_ms": 268.8,
+            "summary": "深度学习画质：画质较差。",
+            "dimensions": {
+              "deep_learning": 37.7
+            },
+            "dl_score": 37.7,
+            "traditional_score": null,
+            "human_expectation": "低",
+            "human_note": "综合分应随模糊加重而下降"
+          },
+          {
+            "category": "blur",
+            "file": "test_samples\\blur\\blur_k15.jpg",
+            "method": "dl",
+            "overall": 34.5,
+            "grade": "E 很差",
+            "elapsed_ms": 254.6,
+            "summary": "深度学习画质：画质较差。",
+            "dimensions": {
+              "deep_learning": 34.5
+            },
+            "dl_score": 34.5,
+            "traditional_score": null,
+            "human_expectation": "低",
+            "human_note": "综合分应随模糊加重而下降"
+          },
+          {
+            "category": "blur",
+            "file": "test_samples\\blur\\blur_k31.jpg",
+            "method": "dl",
+            "overall": 34.8,
+            "grade": "E 很差",
+            "elapsed_ms": 233.8,
+            "summary": "深度学习画质：画质较差。",
+            "dimensions": {
+              "deep_learning": 34.8
+            },
+            "dl_score": 34.8,
+            "traditional_score": null,
+            "human_expectation": "低",
+            "human_note": "综合分应随模糊加重而下降"
+          }
+        ],
+        "count": 3,
+        "avg_overall": 35.7,
+        "avg_elapsed_ms": 252.4
+      },
+      "overexpose": {
+        "entries": [
+          {
+            "category": "overexpose",
+            "file": "test_samples\\overexpose\\over_1.jpg",
+            "method": "dl",
+            "overall": 51.0,
+            "grade": "D 较差",
+            "elapsed_ms": 238.9,
+            "summary": "深度学习画质：画质偏差。",
+            "dimensions": {
+              "deep_learning": 51.0
+            },
+            "dl_score": 51.0,
+            "traditional_score": null,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低"
+          },
+          {
+            "category": "overexpose",
+            "file": "test_samples\\overexpose\\over_2.jpg",
+            "method": "dl",
+            "overall": 52.6,
+            "grade": "D 较差",
+            "elapsed_ms": 236.3,
+            "summary": "深度学习画质：画质偏差。",
+            "dimensions": {
+              "deep_learning": 52.6
+            },
+            "dl_score": 52.6,
+            "traditional_score": null,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低"
+          }
+        ],
+        "count": 2,
+        "avg_overall": 51.8,
+        "avg_elapsed_ms": 237.6
+      },
+      "underexpose": {
+        "entries": [
+          {
+            "category": "underexpose",
+            "file": "test_samples\\underexpose\\under_1.jpg",
+            "method": "dl",
+            "overall": 0.0,
+            "grade": "E 很差",
+            "elapsed_ms": 233.8,
+            "summary": "深度学习画质：画质较差。",
+            "dimensions": {
+              "deep_learning": 0.0
+            },
+            "dl_score": 0.0,
+            "traditional_score": null,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低"
+          },
+          {
+            "category": "underexpose",
+            "file": "test_samples\\underexpose\\under_2.jpg",
+            "method": "dl",
+            "overall": 20.7,
+            "grade": "E 很差",
+            "elapsed_ms": 234.9,
+            "summary": "深度学习画质：画质较差。",
+            "dimensions": {
+              "deep_learning": 20.7
+            },
+            "dl_score": 20.7,
+            "traditional_score": null,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低"
+          }
+        ],
+        "count": 2,
+        "avg_overall": 10.3,
+        "avg_elapsed_ms": 234.4
+      },
+      "noise": {
+        "entries": [
+          {
+            "category": "noise",
+            "file": "test_samples\\noise\\noise_s15.jpg",
+            "method": "dl",
+            "overall": 53.1,
+            "grade": "D 较差",
+            "elapsed_ms": 234.5,
+            "summary": "深度学习画质：画质偏差。",
+            "dimensions": {
+              "deep_learning": 53.1
+            },
+            "dl_score": 53.1,
+            "traditional_score": null,
+            "human_expectation": "低",
+            "human_note": "噪点维度分应随 sigma 下降"
+          },
+          {
+            "category": "noise",
+            "file": "test_samples\\noise\\noise_s30.jpg",
+            "method": "dl",
+            "overall": 58.3,
+            "grade": "D 较差",
+            "elapsed_ms": 238.6,
+            "summary": "深度学习画质：画质一般。",
+            "dimensions": {
+              "deep_learning": 58.3
+            },
+            "dl_score": 58.3,
+            "traditional_score": null,
+            "human_expectation": "低",
+            "human_note": "噪点维度分应随 sigma 下降"
+          },
+          {
+            "category": "noise",
+            "file": "test_samples\\noise\\noise_s50.jpg",
+            "method": "dl",
+            "overall": 64.9,
+            "grade": "C 一般",
+            "elapsed_ms": 251.0,
+            "summary": "深度学习画质：画质一般。",
+            "dimensions": {
+              "deep_learning": 64.9
+            },
+            "dl_score": 64.9,
+            "traditional_score": null,
+            "human_expectation": "低",
+            "human_note": "噪点维度分应随 sigma 下降"
+          }
+        ],
+        "count": 3,
+        "avg_overall": 58.8,
+        "avg_elapsed_ms": 241.4
+      },
+      "large": {
+        "entries": [
+          {
+            "category": "large",
+            "file": "test_samples\\large\\large_12mp.jpg",
+            "method": "dl",
+            "overall": 49.3,
+            "grade": "D 较差",
+            "elapsed_ms": 305.4,
+            "summary": "深度学习画质：画质偏差。",
+            "dimensions": {
+              "deep_learning": 49.3
+            },
+            "dl_score": 49.3,
+            "traditional_score": null,
+            "human_expectation": "中",
+            "human_note": "大图耗时可放宽，但应 < 2000ms"
+          }
+        ],
+        "count": 1,
+        "avg_overall": 49.3,
+        "avg_elapsed_ms": 305.4
+      },
+      "counterexample": {
+        "entries": [
+          {
+            "category": "counterexample",
+            "file": "test_samples\\counterexample\\noise_masquerade_sharp.jpg",
+            "method": "dl",
+            "overall": 61.4,
+            "grade": "C 一般",
+            "elapsed_ms": 266.6,
+            "summary": "深度学习画质：画质一般。",
+            "dimensions": {
+              "deep_learning": 61.4
+            },
+            "dl_score": 61.4,
+            "traditional_score": null,
+            "human_expectation": "失准",
+            "human_note": "清晰度可能虚高（噪点被当作边缘），综合分与主观不符"
+          }
+        ],
+        "count": 1,
+        "avg_overall": 61.4,
+        "avg_elapsed_ms": 266.6
+      },
+      "formats": {
+        "entries": [
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.png",
+            "method": "dl",
+            "overall": 47.7,
+            "grade": "D 较差",
+            "elapsed_ms": 267.4,
+            "summary": "深度学习画质：画质偏差。",
+            "dimensions": {
+              "deep_learning": 47.7
+            },
+            "dl_score": 47.7,
+            "traditional_score": null,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近"
+          },
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.webp",
+            "method": "dl",
+            "overall": 47.7,
+            "grade": "D 较差",
+            "elapsed_ms": 268.4,
+            "summary": "深度学习画质：画质偏差。",
+            "dimensions": {
+              "deep_learning": 47.7
+            },
+            "dl_score": 47.7,
+            "traditional_score": null,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近"
+          },
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.jpg",
+            "method": "dl",
+            "overall": 48.8,
+            "grade": "D 较差",
+            "elapsed_ms": 246.3,
+            "summary": "深度学习画质：画质偏差。",
+            "dimensions": {
+              "deep_learning": 48.8
+            },
+            "dl_score": 48.8,
+            "traditional_score": null,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近"
+          },
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.heic",
+            "method": "dl",
+            "overall": 47.0,
+            "grade": "D 较差",
+            "elapsed_ms": 302.5,
+            "summary": "深度学习画质：画质偏差。",
+            "dimensions": {
+              "deep_learning": 47.0
+            },
+            "dl_score": 47.0,
+            "traditional_score": null,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近"
+          }
+        ],
+        "count": 4,
+        "avg_overall": 47.8,
+        "avg_elapsed_ms": 271.1
+      }
+    },
+    "hybrid": {
+      "clear": {
+        "entries": [
+          {
+            "category": "clear",
+            "file": "test_samples\\clear\\clear_1.jpg",
+            "method": "hybrid",
+            "overall": 70.8,
+            "grade": "C 一般",
+            "elapsed_ms": 379.9,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+            "dimensions": {
+              "sharpness": 99.1,
+              "exposure": 96.0,
+              "noise": 95.5,
+              "contrast": 71.2,
+              "deep_learning": 48.4
+            },
+            "dl_score": 48.4,
+            "traditional_score": 93.24000000000001,
+            "human_expectation": "高",
+            "human_note": "综合分应 ≥ 70",
+            "raw_sharpness": 99.1,
+            "noise_corrected": false
+          },
+          {
+            "category": "clear",
+            "file": "test_samples\\clear\\clear_2.jpg",
+            "method": "hybrid",
+            "overall": 70.8,
+            "grade": "C 一般",
+            "elapsed_ms": 313.3,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+            "dimensions": {
+              "sharpness": 99.1,
+              "exposure": 96.0,
+              "noise": 95.5,
+              "contrast": 71.2,
+              "deep_learning": 48.4
+            },
+            "dl_score": 48.4,
+            "traditional_score": 93.24000000000001,
+            "human_expectation": "高",
+            "human_note": "综合分应 ≥ 70",
+            "raw_sharpness": 99.1,
+            "noise_corrected": false
+          }
+        ],
+        "count": 2,
+        "avg_overall": 70.8,
+        "avg_elapsed_ms": 346.6
+      },
+      "blur": {
+        "entries": [
+          {
+            "category": "blur",
+            "file": "test_samples\\blur\\blur_k5.jpg",
+            "method": "hybrid",
+            "overall": 62.8,
+            "grade": "C 一般",
+            "elapsed_ms": 301.5,
+            "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质较差。",
+            "dimensions": {
+              "sharpness": 83.3,
+              "exposure": 96.0,
+              "noise": 97.0,
+              "contrast": 70.6,
+              "deep_learning": 37.7
+            },
+            "dl_score": 37.7,
+            "traditional_score": 87.995,
+            "human_expectation": "低",
+            "human_note": "综合分应随模糊加重而下降",
+            "raw_sharpness": 83.3,
+            "noise_corrected": false
+          },
+          {
+            "category": "blur",
+            "file": "test_samples\\blur\\blur_k15.jpg",
+            "method": "hybrid",
+            "overall": 51.7,
+            "grade": "D 较差",
+            "elapsed_ms": 266.0,
+            "summary": "清晰度：明显模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质较差。",
+            "dimensions": {
+              "sharpness": 28.8,
+              "exposure": 96.0,
+              "noise": 97.2,
+              "contrast": 70.0,
+              "deep_learning": 34.5
+            },
+            "dl_score": 34.5,
+            "traditional_score": 68.88,
+            "human_expectation": "低",
+            "human_note": "综合分应随模糊加重而下降",
+            "raw_sharpness": 28.8,
+            "noise_corrected": false
+          },
+          {
+            "category": "blur",
+            "file": "test_samples\\blur\\blur_k31.jpg",
+            "method": "hybrid",
+            "overall": 49.1,
+            "grade": "D 较差",
+            "elapsed_ms": 262.2,
+            "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质较差。",
+            "dimensions": {
+              "sharpness": 13.3,
+              "exposure": 96.0,
+              "noise": 97.3,
+              "contrast": 69.5,
+              "deep_learning": 34.8
+            },
+            "dl_score": 34.8,
+            "traditional_score": 63.405,
+            "human_expectation": "低",
+            "human_note": "综合分应随模糊加重而下降",
+            "raw_sharpness": 13.3,
+            "noise_corrected": false
+          }
+        ],
+        "count": 3,
+        "avg_overall": 54.5,
+        "avg_elapsed_ms": 276.6
+      },
+      "overexpose": {
+        "entries": [
+          {
+            "category": "overexpose",
+            "file": "test_samples\\overexpose\\over_1.jpg",
+            "method": "hybrid",
+            "overall": 65.8,
+            "grade": "C 一般",
+            "elapsed_ms": 274.6,
+            "summary": "清晰度：非常清晰；曝光：过曝；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+            "dimensions": {
+              "sharpness": 100.0,
+              "exposure": 40.4,
+              "noise": 95.4,
+              "contrast": 78.0,
+              "deep_learning": 51.0
+            },
+            "dl_score": 51.0,
+            "traditional_score": 80.65,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低",
+            "raw_sharpness": 100.0,
+            "noise_corrected": false
+          },
+          {
+            "category": "overexpose",
+            "file": "test_samples\\overexpose\\over_2.jpg",
+            "method": "hybrid",
+            "overall": 61.0,
+            "grade": "C 一般",
+            "elapsed_ms": 264.6,
+            "summary": "清晰度：非常清晰；曝光：过曝；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质偏差。",
+            "dimensions": {
+              "sharpness": 100.0,
+              "exposure": 0.0,
+              "noise": 96.1,
+              "contrast": 68.9,
+              "deep_learning": 52.6
+            },
+            "dl_score": 52.6,
+            "traditional_score": 69.36,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低",
+            "raw_sharpness": 100.0,
+            "noise_corrected": false
+          }
+        ],
+        "count": 2,
+        "avg_overall": 63.4,
+        "avg_elapsed_ms": 269.6
+      },
+      "underexpose": {
+        "entries": [
+          {
+            "category": "underexpose",
+            "file": "test_samples\\underexpose\\under_1.jpg",
+            "method": "hybrid",
+            "overall": 35.3,
+            "grade": "E 很差",
+            "elapsed_ms": 268.7,
+            "summary": "清晰度：基本清晰；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质较差。",
+            "dimensions": {
+              "sharpness": 75.2,
+              "exposure": 62.3,
+              "noise": 97.0,
+              "contrast": 29.4,
+              "deep_learning": 0.0
+            },
+            "dl_score": 0.0,
+            "traditional_score": 70.55499999999999,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低",
+            "raw_sharpness": 75.2,
+            "noise_corrected": false
+          },
+          {
+            "category": "underexpose",
+            "file": "test_samples\\underexpose\\under_2.jpg",
+            "method": "hybrid",
+            "overall": 50.0,
+            "grade": "D 较差",
+            "elapsed_ms": 262.0,
+            "summary": "清晰度：清晰；曝光：整体偏暗；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质较差。",
+            "dimensions": {
+              "sharpness": 88.1,
+              "exposure": 71.9,
+              "noise": 96.7,
+              "contrast": 41.5,
+              "deep_learning": 20.7
+            },
+            "dl_score": 20.7,
+            "traditional_score": 79.21,
+            "human_expectation": "低",
+            "human_note": "曝光维度分应明显偏低",
+            "raw_sharpness": 88.1,
+            "noise_corrected": false
+          }
+        ],
+        "count": 2,
+        "avg_overall": 42.6,
+        "avg_elapsed_ms": 265.4
+      },
+      "noise": {
+        "entries": [
+          {
+            "category": "noise",
+            "file": "test_samples\\noise\\noise_s15.jpg",
+            "method": "hybrid",
+            "overall": 71.2,
+            "grade": "C 一般",
+            "elapsed_ms": 273.2,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好；深度学习画质：画质偏差。",
+            "dimensions": {
+              "sharpness": 100.0,
+              "exposure": 96.2,
+              "noise": 77.8,
+              "contrast": 71.7,
+              "deep_learning": 53.1
+            },
+            "dl_score": 53.1,
+            "traditional_score": 89.255,
+            "human_expectation": "低",
+            "human_note": "噪点维度分应随 sigma 下降",
+            "raw_sharpness": 100.0,
+            "noise_corrected": false
+          },
+          {
+            "category": "noise",
+            "file": "test_samples\\noise\\noise_s30.jpg",
+            "method": "hybrid",
+            "overall": 69.3,
+            "grade": "C 一般",
+            "elapsed_ms": 275.0,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好；深度学习画质：画质一般。",
+            "dimensions": {
+              "sharpness": 87.0,
+              "exposure": 96.2,
+              "noise": 59.6,
+              "contrast": 73.0,
+              "deep_learning": 58.3
+            },
+            "dl_score": 58.3,
+            "traditional_score": 80.35000000000001,
+            "human_expectation": "低",
+            "human_note": "噪点维度分应随 sigma 下降",
+            "raw_sharpness": 100.0,
+            "noise_corrected": true
+          },
+          {
+            "category": "noise",
+            "file": "test_samples\\noise\\noise_s50.jpg",
+            "method": "hybrid",
+            "overall": 66.8,
+            "grade": "C 一般",
+            "elapsed_ms": 281.7,
+            "summary": "清晰度：非常清晰（噪点干扰已校正）；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。",
+            "dimensions": {
+              "sharpness": 65.5,
+              "exposure": 96.3,
+              "noise": 41.7,
+              "contrast": 75.1,
+              "deep_learning": 64.9
+            },
+            "dl_score": 64.9,
+            "traditional_score": 68.69,
+            "human_expectation": "低",
+            "human_note": "噪点维度分应随 sigma 下降",
+            "raw_sharpness": 100.0,
+            "noise_corrected": true
+          }
+        ],
+        "count": 3,
+        "avg_overall": 69.1,
+        "avg_elapsed_ms": 276.6
+      },
+      "large": {
+        "entries": [
+          {
+            "category": "large",
+            "file": "test_samples\\large\\large_12mp.jpg",
+            "method": "hybrid",
+            "overall": 69.1,
+            "grade": "C 一般",
+            "elapsed_ms": 345.2,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好；深度学习画质：画质偏差。",
+            "dimensions": {
+              "sharpness": 100.0,
+              "exposure": 96.0,
+              "noise": 76.8,
+              "contrast": 70.7,
+              "deep_learning": 49.3
+            },
+            "dl_score": 49.3,
+            "traditional_score": 88.805,
+            "human_expectation": "中",
+            "human_note": "大图耗时可放宽，但应 < 2000ms",
+            "raw_sharpness": 100.0,
+            "noise_corrected": false
+          }
+        ],
+        "count": 1,
+        "avg_overall": 69.1,
+        "avg_elapsed_ms": 345.2
+      },
+      "counterexample": {
+        "entries": [
+          {
+            "category": "counterexample",
+            "file": "test_samples\\counterexample\\noise_masquerade_sharp.jpg",
+            "method": "hybrid",
+            "overall": 67.3,
+            "grade": "C 一般",
+            "elapsed_ms": 274.8,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。",
+            "dimensions": {
+              "sharpness": 74.8,
+              "exposure": 96.2,
+              "noise": 47.7,
+              "contrast": 74.0,
+              "deep_learning": 61.4
+            },
+            "dl_score": 61.4,
+            "traditional_score": 73.255,
+            "human_expectation": "失准",
+            "human_note": "清晰度可能虚高（噪点被当作边缘），综合分与主观不符",
+            "raw_sharpness": 100.0,
+            "noise_corrected": true
+          }
+        ],
+        "count": 1,
+        "avg_overall": 67.3,
+        "avg_elapsed_ms": 274.8
+      },
+      "formats": {
+        "entries": [
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.png",
+            "method": "hybrid",
+            "overall": 70.5,
+            "grade": "C 一般",
+            "elapsed_ms": 293.5,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+            "dimensions": {
+              "sharpness": 99.0,
+              "exposure": 96.0,
+              "noise": 95.7,
+              "contrast": 71.2,
+              "deep_learning": 47.7
+            },
+            "dl_score": 47.7,
+            "traditional_score": 93.255,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近",
+            "raw_sharpness": 99.0,
+            "noise_corrected": false
+          },
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.webp",
+            "method": "hybrid",
+            "overall": 70.5,
+            "grade": "C 一般",
+            "elapsed_ms": 304.9,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+            "dimensions": {
+              "sharpness": 99.0,
+              "exposure": 96.0,
+              "noise": 95.7,
+              "contrast": 71.2,
+              "deep_learning": 47.7
+            },
+            "dl_score": 47.7,
+            "traditional_score": 93.255,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近",
+            "raw_sharpness": 99.0,
+            "noise_corrected": false
+          },
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.jpg",
+            "method": "hybrid",
+            "overall": 71.1,
+            "grade": "C 一般",
+            "elapsed_ms": 296.1,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+            "dimensions": {
+              "sharpness": 99.4,
+              "exposure": 96.0,
+              "noise": 95.9,
+              "contrast": 71.2,
+              "deep_learning": 48.8
+            },
+            "dl_score": 48.8,
+            "traditional_score": 93.445,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近",
+            "raw_sharpness": 99.4,
+            "noise_corrected": false
+          },
+          {
+            "category": "formats",
+            "file": "test_samples\\formats\\sample.heic",
+            "method": "hybrid",
+            "overall": 70.0,
+            "grade": "C 一般",
+            "elapsed_ms": 320.4,
+            "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
+            "dimensions": {
+              "sharpness": 98.2,
+              "exposure": 96.0,
+              "noise": 96.2,
+              "contrast": 71.2,
+              "deep_learning": 47.0
+            },
+            "dl_score": 47.0,
+            "traditional_score": 93.1,
+            "human_expectation": "一致",
+            "human_note": "同内容不同格式分数应接近",
+            "raw_sharpness": 98.2,
+            "noise_corrected": false
+          }
+        ],
+        "count": 4,
+        "avg_overall": 70.5,
+        "avg_elapsed_ms": 303.7
+      }
+    }
+  },
+  "methods": [
+    "traditional",
+    "dl",
+    "hybrid"
+  ],
+  "dl_available": true
+}

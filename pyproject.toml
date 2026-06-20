@@ -1,0 +1,36 @@
+[project]
+name = "image-quality-analyzer"
+version = "1.0.0"
+description = "AI 图像画质分析工具"
+requires-python = ">=3.10"
+dependencies = [
+    "flet>=0.85.0",
+    "opencv-python==4.10.0.84",
+    "numpy==1.26.4",
+    "Pillow==10.4.0",
+    "pillow-heif>=0.13.0",
+]
+
+[project.optional-dependencies]
+dl = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "pyiqa>=0.1.12",
+]
+
+[tool.flet]
+app = "run.py"
+product = "画质分析工具"
+org = "com.iqa"
+bundle_id = "com.iqa.quality"
+build_number = 1
+permissions = ["photo_library"]
+exclude = ["tests/**", "test_samples/**", "docs/**", ".git/**"]
+
+[tool.flet.android]
+split_per_abi = true
+min_sdk_version = 24
+target_sdk_version = 35
+
+[tool.flet.android.permission]
+"android.permission.READ_MEDIA_IMAGES" = true

@@ -1,0 +1,9 @@
+opencv-python>=4.8.0
+numpy>=1.24.0
+Pillow>=10.0.0
+pillow-heif>=0.13.0
+flet>=0.85.0
+google-generativeai>=0.8.0
+
+# 深度学习评分（可选，桌面开发建议安装）
+-r requirements-dl.txt
