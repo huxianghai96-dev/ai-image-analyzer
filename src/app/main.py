@@ -22,14 +22,30 @@ from src.analyzer.scorer import METHOD_LABELS, QualityReport, analyze_image  # n
 from src.analyzer import AIAnalyzerError, analyze_image_with_ai  # noqa: E402
 
 # ── Design tokens ─────────────────────────────────────────────────────────────
-_BG = "#0B0D12"
-_SURFACE = "#151820"
-_SURFACE_ALT = "#1C2030"
-_BORDER = "#2A3042"
+_BG = "#06080D"
+_SURFACE = "#0F1219"
+_SURFACE_HOVER = "#151A24"
+_SURFACE_ALT = "#181D28"
+_SURFACE_ELEVATED = "#1E2433"
+_BORDER = "#232B3E"
+_BORDER_SUBTLE = "#1A2035"
 _TEXT = "#E8ECF4"
-_TEXT_MUTED = "#8B93A8"
-_ACCENT = "#6366F1"
-_ACCENT_GRADIENT = ("#4F46E5", "#7C3AED")
+_TEXT_SECONDARY = "#B0B8CC"
+_TEXT_MUTED = "#6B7490"
+_ACCENT = "#818CF8"
+_ACCENT_BRIGHT = "#A5B4FC"
+_ACCENT_DIM = "#4F46E5"
+_ACCENT_GLOW = "#6366F120"
+_GRADIENT_START = "#4338CA"
+_GRADIENT_MID = "#6366F1"
+_GRADIENT_END = "#8B5CF6"
+
+_SUCCESS = "#34D399"
+_SUCCESS_DIM = "#059669"
+_WARNING = "#FBBF24"
+_WARNING_DIM = "#D97706"
+_ERROR = "#F87171"
+_ERROR_DIM = "#DC2626"
 
 _DIM_ICONS = {
     "sharpness": ft.Icons.CENTER_FOCUS_STRONG,
@@ -37,6 +53,14 @@ _DIM_ICONS = {
     "noise": ft.Icons.GRAIN,
     "contrast": ft.Icons.TONALITY,
     "deep_learning": ft.Icons.PSYCHOLOGY_OUTLINED,
+}
+
+_DIM_COLORS = {
+    "sharpness": "#60A5FA",
+    "exposure": "#FBBF24",
+    "noise": "#F472B6",
+    "contrast": "#34D399",
+    "deep_learning": "#A78BFA",
 }
 
 
@@ -59,59 +83,101 @@ _PLACEHOLDER_PNG = base64.b64decode(
 
 
 def _score_color(score: float) -> str:
-    if score >= 75:
-        return "#34D399"
-    if score >= 50:
-        return "#FBBF24"
-    return "#F87171"
+    if score >= 80:
+        return _SUCCESS
+    if score >= 60:
+        return _WARNING
+    return _ERROR
 
 
-def _card(content: ft.Control, *, padding: int = 20) -> ft.Container:
+def _score_bg(score: float) -> str:
+    if score >= 80:
+        return _SUCCESS_DIM
+    if score >= 60:
+        return _WARNING_DIM
+    return _ERROR_DIM
+
+
+def _card(content: ft.Control, *, padding: int = 24) -> ft.Container:
+    """Glassmorphism-style card with subtle border glow."""
     return ft.Container(
         content=content,
         padding=padding,
-        border_radius=16,
+        border_radius=20,
         bgcolor=_SURFACE,
-        border=ft.Border.all(1, _BORDER),
+        border=ft.Border.all(1, _BORDER_SUBTLE),
+        shadow=ft.BoxShadow(
+            spread_radius=0,
+            blur_radius=24,
+            color=ft.Colors.with_opacity(0.06, ft.Colors.BLACK),
+            offset=ft.Offset(0, 8),
+        ),
+        animate=ft.Animation(200, ft.AnimationCurve.EASE_OUT),
     )
 
 
-def _section_label(text: str) -> ft.Text:
-    return ft.Text(text, size=13, weight=ft.FontWeight.W_600, color=_TEXT_MUTED)
+def _section_label(text: str) -> ft.Container:
+    return ft.Container(
+        content=ft.Row(
+            [
+                ft.Container(width=3, height=14, border_radius=2, bgcolor=_ACCENT),
+                ft.Text(text, size=13, weight=ft.FontWeight.W_700, color=_TEXT_SECONDARY),
+            ],
+            spacing=10,
+            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+        ),
+        margin=ft.Margin.only(bottom=4),
+    )
 
 
 def _build_header() -> ft.Container:
+    """Premium animated gradient header."""
     return ft.Container(
         content=ft.Row(
             [
                 ft.Container(
-                    content=ft.Icon(ft.Icons.HIGH_QUALITY, size=28, color=ft.Colors.WHITE),
-                    bgcolor=ft.Colors.with_opacity(0.18, ft.Colors.WHITE),
-                    border_radius=14,
-                    padding=14,
+                    content=ft.Icon(ft.Icons.AUTO_AWESOME, size=26, color=ft.Colors.WHITE),
+                    width=56,
+                    height=56,
+                    bgcolor=ft.Colors.with_opacity(0.2, ft.Colors.WHITE),
+                    border_radius=16,
+                    alignment=ft.alignment.Alignment.CENTER,
+                    border=ft.Border.all(1, ft.Colors.with_opacity(0.15, ft.Colors.WHITE)),
                 ),
                 ft.Column(
                     [
-                        ft.Text("AI 图像画质分析", size=22, weight=ft.FontWeight.BOLD, color=ft.Colors.WHITE),
                         ft.Text(
-                            "JPEG · PNG · WebP · HEIC  |  传统 CV / 深度学习  |  离线可用",
+                            "AI 图像画质分析",
+                            size=24,
+                            weight=ft.FontWeight.BOLD,
+                            color=ft.Colors.WHITE,
+                        ),
+                        ft.Text(
+                            "JPEG · PNG · WebP · HEIC  ·  传统 CV / 深度学习  ·  离线可用",
                             size=12,
-                            color=ft.Colors.with_opacity(0.82, ft.Colors.WHITE),
+                            color=ft.Colors.with_opacity(0.78, ft.Colors.WHITE),
                         ),
                     ],
-                    spacing=4,
+                    spacing=6,
                     expand=True,
                 ),
             ],
-            spacing=16,
+            spacing=18,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
         ),
-        padding=ft.Padding.symmetric(horizontal=24, vertical=22),
-        border_radius=20,
+        padding=ft.Padding.symmetric(horizontal=28, vertical=26),
+        border_radius=24,
         gradient=ft.LinearGradient(
-            begin=ft.alignment.Alignment.CENTER_LEFT,
-            end=ft.alignment.Alignment.CENTER_RIGHT,
-            colors=list(_ACCENT_GRADIENT),
+            begin=ft.alignment.Alignment.TOP_LEFT,
+            end=ft.alignment.Alignment.BOTTOM_RIGHT,
+            colors=[_GRADIENT_START, _GRADIENT_MID, _GRADIENT_END],
+            tile_mode=ft.GradientTileMode.CLAMP,
+        ),
+        shadow=ft.BoxShadow(
+            spread_radius=0,
+            blur_radius=40,
+            color=ft.Colors.with_opacity(0.3, _GRADIENT_MID),
+            offset=ft.Offset(0, 12),
         ),
     )
 
@@ -121,45 +187,62 @@ def _build_score_ring(score: float, grade: str) -> ft.Container:
     return ft.Container(
         content=ft.Stack(
             [
+                # Glow background
+                ft.Container(
+                    width=140,
+                    height=140,
+                    border_radius=70,
+                    bgcolor=ft.Colors.with_opacity(0.06, ring_color),
+                ),
                 ft.ProgressRing(
                     value=score / 100,
-                    width=132,
-                    height=132,
-                    stroke_width=8,
+                    width=140,
+                    height=140,
+                    stroke_width=7,
                     color=ring_color,
-                    bgcolor=ft.Colors.with_opacity(0.12, ring_color),
+                    bgcolor=ft.Colors.with_opacity(0.08, ring_color),
                 ),
                 ft.Container(
                     content=ft.Column(
                         [
                             ft.Text(
                                 str(int(round(score))),
-                                size=40,
+                                size=42,
                                 weight=ft.FontWeight.BOLD,
                                 color=ring_color,
                             ),
-                            ft.Text("/ 100", size=13, color=_TEXT_MUTED),
-                            ft.Text(grade, size=14, weight=ft.FontWeight.W_600, color=_TEXT),
+                            ft.Text("/ 100", size=12, color=_TEXT_MUTED, weight=ft.FontWeight.W_500),
+                            ft.Container(
+                                content=ft.Text(
+                                    grade, size=11, weight=ft.FontWeight.W_700, color=ft.Colors.WHITE,
+                                ),
+                                bgcolor=ft.Colors.with_opacity(0.2, ring_color),
+                                border_radius=6,
+                                padding=ft.Padding.symmetric(horizontal=10, vertical=3),
+                            ),
                         ],
                         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-                        spacing=0,
+                        spacing=2,
                     ),
-                    width=132,
-                    height=132,
+                    width=140,
+                    height=140,
                     alignment=ft.alignment.Alignment.CENTER,
                 ),
             ],
-            width=132,
-            height=132,
+            width=140,
+            height=140,
         ),
-        width=132,
-        height=132,
+        width=140,
+        height=140,
         alignment=ft.alignment.Alignment.CENTER,
+        animate_scale=ft.Animation(400, ft.AnimationCurve.EASE_OUT_BACK),
     )
 
 
 def _build_dimension_row(d) -> ft.Container:
     icon = _DIM_ICONS.get(d.name, ft.Icons.ANALYTICS_OUTLINED)
+    # Use unique color per dimension, fallback to score-based color
+    accent = _DIM_COLORS.get(d.name, _score_color(d.score))
     color = _score_color(d.score)
     return ft.Container(
         content=ft.Column(
@@ -167,10 +250,12 @@ def _build_dimension_row(d) -> ft.Container:
                 ft.Row(
                     [
                         ft.Container(
-                            content=ft.Icon(icon, size=18, color=color),
-                            bgcolor=ft.Colors.with_opacity(0.12, color),
-                            border_radius=8,
-                            padding=8,
+                            content=ft.Icon(icon, size=18, color=accent),
+                            bgcolor=ft.Colors.with_opacity(0.10, accent),
+                            border_radius=10,
+                            width=38,
+                            height=38,
+                            alignment=ft.alignment.Alignment.CENTER,
                         ),
                         ft.Column(
                             [
@@ -180,24 +265,39 @@ def _build_dimension_row(d) -> ft.Container:
                             spacing=2,
                             expand=True,
                         ),
-                        ft.Text(f"{d.score}", color=color, weight=ft.FontWeight.BOLD, size=16),
+                        ft.Container(
+                            content=ft.Text(
+                                f"{d.score}",
+                                color=color,
+                                weight=ft.FontWeight.BOLD,
+                                size=16,
+                            ),
+                            bgcolor=ft.Colors.with_opacity(0.08, color),
+                            border_radius=8,
+                            padding=ft.Padding.symmetric(horizontal=12, vertical=6),
+                        ),
                     ],
-                    spacing=12,
+                    spacing=14,
                     vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 ),
-                ft.ProgressBar(
-                    value=d.score / 100,
-                    color=color,
-                    bgcolor=ft.Colors.with_opacity(0.15, _BORDER),
-                    height=6,
-                    border_radius=3,
+                ft.Container(
+                    content=ft.ProgressBar(
+                        value=d.score / 100,
+                        color=accent,
+                        bgcolor=ft.Colors.with_opacity(0.08, _BORDER),
+                        height=5,
+                        border_radius=3,
+                    ),
+                    padding=ft.Padding.only(left=52),
                 ),
             ],
-            spacing=8,
+            spacing=10,
         ),
-        padding=14,
-        border_radius=12,
+        padding=16,
+        border_radius=14,
         bgcolor=_SURFACE_ALT,
+        border=ft.Border.all(1, _BORDER_SUBTLE),
+        animate=ft.Animation(200, ft.AnimationCurve.EASE_OUT),
     )
 
 
@@ -205,44 +305,42 @@ def _build_report_view(report: QualityReport) -> ft.Column:
     info = report.image_info
     method_label = METHOD_LABELS.get(report.method, report.method)
 
+    def _meta_chip(icon, text):
+        return ft.Container(
+            content=ft.Row(
+                [
+                    ft.Icon(icon, size=12, color=_TEXT_MUTED),
+                    ft.Text(text, size=11, color=_TEXT_SECONDARY, weight=ft.FontWeight.W_500),
+                ],
+                spacing=6,
+                vertical_alignment=ft.CrossAxisAlignment.CENTER,
+            ),
+            padding=ft.Padding.symmetric(horizontal=12, vertical=6),
+            border_radius=20,
+            bgcolor=_SURFACE_ALT,
+            border=ft.Border.all(1, _BORDER_SUBTLE),
+        )
+
     meta_chips = [
-        ft.Container(
-            content=ft.Text(info.format_name, size=11, color=_TEXT_MUTED),
-            padding=ft.Padding.symmetric(horizontal=10, vertical=4),
-            border_radius=20,
-            bgcolor=ft.Colors.with_opacity(0.5, _SURFACE_ALT),
-            border=ft.Border.all(1, _BORDER),
-        ),
-        ft.Container(
-            content=ft.Text(f"{info.width}×{info.height}", size=11, color=_TEXT_MUTED),
-            padding=ft.Padding.symmetric(horizontal=10, vertical=4),
-            border_radius=20,
-            bgcolor=ft.Colors.with_opacity(0.5, _SURFACE_ALT),
-            border=ft.Border.all(1, _BORDER),
-        ),
-        ft.Container(
-            content=ft.Text(f"{info.megapixels} MP", size=11, color=_TEXT_MUTED),
-            padding=ft.Padding.symmetric(horizontal=10, vertical=4),
-            border_radius=20,
-            bgcolor=ft.Colors.with_opacity(0.5, _SURFACE_ALT),
-            border=ft.Border.all(1, _BORDER),
-        ),
-        ft.Container(
-            content=ft.Text(f"{info.file_size_kb:.0f} KB", size=11, color=_TEXT_MUTED),
-            padding=ft.Padding.symmetric(horizontal=10, vertical=4),
-            border_radius=20,
-            bgcolor=ft.Colors.with_opacity(0.5, _SURFACE_ALT),
-            border=ft.Border.all(1, _BORDER),
-        ),
+        _meta_chip(ft.Icons.IMAGE_OUTLINED, info.format_name),
+        _meta_chip(ft.Icons.ASPECT_RATIO, f"{info.width}×{info.height}"),
+        _meta_chip(ft.Icons.CAMERA, f"{info.megapixels} MP"),
+        _meta_chip(ft.Icons.SD_STORAGE, f"{info.file_size_kb:.0f} KB"),
     ]
 
     hybrid_note = None
     if report.method == "hybrid" and report.traditional_score is not None and report.dl_score is not None:
-        hybrid_note = ft.Text(
-            f"传统 {report.traditional_score} + 深度学习 {report.dl_score} → 综合 {report.overall_score}",
-            size=11,
-            color=_TEXT_MUTED,
-            text_align=ft.TextAlign.CENTER,
+        hybrid_note = ft.Container(
+            content=ft.Text(
+                f"传统 {report.traditional_score} + 深度学习 {report.dl_score} → 综合 {report.overall_score}",
+                size=11,
+                color=_TEXT_SECONDARY,
+                text_align=ft.TextAlign.CENTER,
+                weight=ft.FontWeight.W_500,
+            ),
+            bgcolor=ft.Colors.with_opacity(0.06, _ACCENT),
+            border_radius=8,
+            padding=ft.Padding.symmetric(horizontal=12, vertical=6),
         )
 
     overall_content: list[ft.Control] = [
@@ -250,14 +348,23 @@ def _build_report_view(report: QualityReport) -> ft.Column:
             [
                 ft.Column(
                     [
-                        ft.Text("综合画质评分", size=15, weight=ft.FontWeight.BOLD, color=_TEXT),
-                        ft.Text(
-                            f"{method_label} · {report.elapsed_ms:.0f} ms",
-                            size=11,
-                            color=_TEXT_MUTED,
+                        ft.Text("综合画质评分", size=16, weight=ft.FontWeight.BOLD, color=_TEXT),
+                        ft.Container(
+                            content=ft.Row(
+                                [
+                                    ft.Icon(ft.Icons.TIMER_OUTLINED, size=12, color=_TEXT_MUTED),
+                                    ft.Text(
+                                        f"{method_label} · {report.elapsed_ms:.0f} ms",
+                                        size=11,
+                                        color=_TEXT_MUTED,
+                                        weight=ft.FontWeight.W_500,
+                                    ),
+                                ],
+                                spacing=4,
+                            ),
                         ),
                     ],
-                    spacing=4,
+                    spacing=6,
                     expand=True,
                 ),
                 _build_score_ring(report.overall_score, report.grade),
@@ -270,8 +377,8 @@ def _build_report_view(report: QualityReport) -> ft.Column:
         overall_content.append(hybrid_note)
 
     overall_card = _card(
-        ft.Column(overall_content, spacing=12),
-        padding=20,
+        ft.Column(overall_content, spacing=14),
+        padding=24,
     )
 
     dim_section = ft.Column(
@@ -285,16 +392,23 @@ def _build_report_view(report: QualityReport) -> ft.Column:
     summary = ft.Container(
         content=ft.Row(
             [
-                ft.Icon(ft.Icons.TIPS_AND_UPDATES_OUTLINED, size=18, color=_ACCENT),
-                ft.Text(report.summary, size=13, color=_TEXT, expand=True),
+                ft.Container(
+                    content=ft.Icon(ft.Icons.TIPS_AND_UPDATES_OUTLINED, size=18, color=_ACCENT_BRIGHT),
+                    bgcolor=ft.Colors.with_opacity(0.12, _ACCENT),
+                    border_radius=10,
+                    width=36,
+                    height=36,
+                    alignment=ft.alignment.Alignment.CENTER,
+                ),
+                ft.Text(report.summary, size=13, color=_TEXT_SECONDARY, expand=True),
             ],
-            spacing=10,
+            spacing=14,
             vertical_alignment=ft.CrossAxisAlignment.START,
         ),
-        padding=16,
-        border_radius=12,
-        bgcolor=ft.Colors.with_opacity(0.08, _ACCENT),
-        border=ft.Border.all(1, ft.Colors.with_opacity(0.25, _ACCENT)),
+        padding=18,
+        border_radius=16,
+        bgcolor=ft.Colors.with_opacity(0.05, _ACCENT),
+        border=ft.Border.all(1, ft.Colors.with_opacity(0.15, _ACCENT)),
     )
 
     return ft.Column(
@@ -309,97 +423,141 @@ def _build_report_view(report: QualityReport) -> ft.Column:
 
 
 def main(page: ft.Page):
-    page.title = "画质分析工具"
+    page.title = "AI 画质分析工具"
     page.theme_mode = ft.ThemeMode.DARK
-    page.theme = ft.Theme(color_scheme_seed=_ACCENT, visual_density=ft.VisualDensity.COMFORTABLE)
+    page.theme = ft.Theme(
+        color_scheme_seed=_ACCENT,
+        visual_density=ft.VisualDensity.COMFORTABLE,
+    )
     page.bgcolor = _BG
     page.padding = 0
     page.scroll = ft.ScrollMode.AUTO
 
+    # ── Preview area ──────────────────────────────────────────────────────────
     preview_image = ft.Image(
         src=_PLACEHOLDER_PNG,
         fit=ft.BoxFit.CONTAIN,
-        height=280,
+        height=300,
         visible=False,
-        border_radius=12,
+        border_radius=16,
     )
     preview_placeholder = ft.Container(
         content=ft.Column(
             [
-                ft.Icon(ft.Icons.IMAGE_OUTLINED, size=48, color=_TEXT_MUTED),
-                ft.Text("分析后将在此显示图片预览", size=13, color=_TEXT_MUTED),
+                ft.Container(
+                    content=ft.Icon(ft.Icons.IMAGE_OUTLINED, size=36, color=_TEXT_MUTED),
+                    width=72,
+                    height=72,
+                    border_radius=20,
+                    bgcolor=ft.Colors.with_opacity(0.06, _ACCENT),
+                    alignment=ft.alignment.Alignment.CENTER,
+                ),
+                ft.Text("分析后将在此显示图片预览", size=13, color=_TEXT_MUTED, weight=ft.FontWeight.W_500),
+                ft.Text("支持 JPEG · PNG · WebP · HEIC", size=11, color=ft.Colors.with_opacity(0.5, _TEXT_MUTED)),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             spacing=12,
         ),
-        height=280,
+        height=300,
         alignment=ft.alignment.Alignment.CENTER,
-        border_radius=12,
+        border_radius=16,
         bgcolor=_SURFACE_ALT,
-        border=ft.Border.all(1, _BORDER),
+        border=ft.Border.all(1, _BORDER_SUBTLE),
     )
     preview_stack = ft.Stack([preview_placeholder, preview_image])
 
-    status_icon = ft.Icon(ft.Icons.INFO_OUTLINED, size=16, color=_TEXT_MUTED)
-    status_text = ft.Text("请选择一张本地图片进行分析", size=13, color=_TEXT_MUTED, expand=True)
+    # ── Status bar ────────────────────────────────────────────────────────────
+    status_icon = ft.Icon(ft.Icons.INFO_OUTLINED, size=15, color=_TEXT_MUTED)
+    status_text = ft.Text(
+        "请选择一张本地图片进行分析", size=13, color=_TEXT_MUTED,
+        expand=True, weight=ft.FontWeight.W_500,
+    )
     status_bar = ft.Container(
-        content=ft.Row([status_icon, status_text], spacing=8, vertical_alignment=ft.CrossAxisAlignment.CENTER),
-        padding=ft.Padding.symmetric(horizontal=14, vertical=10),
-        border_radius=10,
+        content=ft.Row(
+            [status_icon, status_text],
+            spacing=10,
+            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+        ),
+        padding=ft.Padding.symmetric(horizontal=16, vertical=12),
+        border_radius=12,
         bgcolor=_SURFACE_ALT,
-        border=ft.Border.all(1, _BORDER),
+        border=ft.Border.all(1, _BORDER_SUBTLE),
+        animate=ft.Animation(300, ft.AnimationCurve.EASE_OUT),
     )
     loading_ring = ft.ProgressRing(width=18, height=18, stroke_width=2, color=_ACCENT, visible=False)
 
     report_container = ft.Column(spacing=8)
     format_info = ft.Text(format_comparison_text(), size=12, color=_TEXT_MUTED)
 
+    # ── Input area ────────────────────────────────────────────────────────────
     path_input = ft.TextField(
         label="图片路径",
         hint_text=r"例如：C:\Users\12777\Pictures\demo.jpg",
-        border_radius=12,
+        border_radius=14,
         filled=True,
         bgcolor=_SURFACE_ALT,
         border_color=_BORDER,
         focused_border_color=_ACCENT,
+        cursor_color=_ACCENT,
+        label_style=ft.TextStyle(color=_TEXT_MUTED),
         expand=True,
     )
 
+    # ── Method selection ──────────────────────────────────────────────────────
     dl_ready = is_dl_available()
+
+    def _method_chip(value: str, label: str, icon: str, disabled: bool = False):
+        return ft.Radio(
+            value=value,
+            label=label,
+            fill_color={
+                ft.ControlState.SELECTED: _ACCENT,
+                ft.ControlState.DEFAULT: _BORDER,
+            },
+            disabled=disabled,
+        )
+
     method_group = ft.RadioGroup(
         value="traditional",
         content=ft.Row(
             [
-                ft.Radio(value="traditional", label="传统算法", fill_color=_ACCENT),
-                ft.Radio(value="dl", label="深度学习", fill_color=_ACCENT, disabled=not dl_ready),
-                ft.Radio(value="hybrid", label="混合模式", fill_color=_ACCENT, disabled=not dl_ready),
+                _method_chip("traditional", "传统算法", ft.Icons.ANALYTICS),
+                _method_chip("dl", "深度学习", ft.Icons.PSYCHOLOGY, disabled=not dl_ready),
+                _method_chip("hybrid", "混合模式", ft.Icons.MERGE_TYPE, disabled=not dl_ready),
             ],
             wrap=True,
-            spacing=16,
+            spacing=20,
         ),
     )
-    dl_hint = ft.Row(
-        [
-            ft.Icon(
-                ft.Icons.CHECK_CIRCLE_OUTLINE if dl_ready else ft.Icons.WARNING_AMBER_OUTLINED,
-                size=14,
-                color="#34D399" if dl_ready else "#FBBF24",
-            ),
-            ft.Text(
-                "深度学习模式已就绪（pyiqa + CPU 推理）" if dl_ready else "深度学习未安装：pip install -r requirements-dl.txt",
-                size=11,
-                color="#34D399" if dl_ready else "#FBBF24",
-            ),
-        ],
-        spacing=6,
+    dl_hint = ft.Container(
+        content=ft.Row(
+            [
+                ft.Icon(
+                    ft.Icons.CHECK_CIRCLE if dl_ready else ft.Icons.WARNING_AMBER_OUTLINED,
+                    size=14,
+                    color=_SUCCESS if dl_ready else _WARNING,
+                ),
+                ft.Text(
+                    "深度学习模式已就绪（pyiqa + CPU 推理）" if dl_ready else "深度学习未安装：pip install -r requirements-dl.txt",
+                    size=11,
+                    color=_SUCCESS if dl_ready else _WARNING,
+                    weight=ft.FontWeight.W_500,
+                ),
+            ],
+            spacing=8,
+        ),
+        bgcolor=ft.Colors.with_opacity(0.06, _SUCCESS if dl_ready else _WARNING),
+        border_radius=8,
+        padding=ft.Padding.symmetric(horizontal=12, vertical=6),
     )
 
+    # ── Status helpers ────────────────────────────────────────────────────────
     def _set_status(message: str, *, kind: str = "info", loading: bool = False):
         icons = {
             "info": (ft.Icons.INFO_OUTLINED, _TEXT_MUTED),
             "loading": (ft.Icons.HOURGLASS_EMPTY, _ACCENT),
-            "success": (ft.Icons.CHECK_CIRCLE_OUTLINE, "#34D399"),
-            "error": (ft.Icons.ERROR_OUTLINE, "#F87171"),
+            "success": (ft.Icons.CHECK_CIRCLE_OUTLINE, _SUCCESS),
+            "error": (ft.Icons.ERROR_OUTLINE, _ERROR),
         }
         icon_name, color = icons.get(kind, icons["info"])
         status_icon.name = icon_name
@@ -407,7 +565,16 @@ def main(page: ft.Page):
         status_text.value = message
         status_text.color = color if kind in ("success", "error") else _TEXT_MUTED
         loading_ring.visible = loading
+        # Animate status bar border color based on kind
+        border_colors = {
+            "info": _BORDER_SUBTLE,
+            "loading": ft.Colors.with_opacity(0.3, _ACCENT),
+            "success": ft.Colors.with_opacity(0.3, _SUCCESS),
+            "error": ft.Colors.with_opacity(0.3, _ERROR),
+        }
+        status_bar.border = ft.Border.all(1, border_colors.get(kind, _BORDER_SUBTLE))
 
+    # ── Analyze callback ──────────────────────────────────────────────────────
     def on_analyze(source: str | bytes):
         method = method_group.value or "traditional"
         try:
@@ -451,15 +618,32 @@ def main(page: ft.Page):
             return
         on_analyze(str(candidate))
 
-    analyze_btn = ft.FilledButton(
-        "开始分析",
-        icon=ft.Icons.AUTO_AWESOME,
+    analyze_btn = ft.Container(
+        content=ft.Row(
+            [
+                ft.Icon(ft.Icons.AUTO_AWESOME, size=18, color=ft.Colors.WHITE),
+                ft.Text("开始分析", size=14, weight=ft.FontWeight.W_600, color=ft.Colors.WHITE),
+            ],
+            spacing=8,
+            alignment=ft.MainAxisAlignment.CENTER,
+        ),
+        bgcolor=_ACCENT_DIM,
+        border_radius=14,
+        padding=ft.Padding.symmetric(horizontal=28, vertical=14),
         on_click=analyze_path,
-        style=ft.ButtonStyle(
-            bgcolor=_ACCENT,
-            color=ft.Colors.WHITE,
-            padding=ft.Padding.symmetric(horizontal=24, vertical=14),
-            shape=ft.RoundedRectangleBorder(radius=12),
+        ink=True,
+        ink_color=ft.Colors.with_opacity(0.15, ft.Colors.WHITE),
+        animate=ft.Animation(200, ft.AnimationCurve.EASE_OUT),
+        shadow=ft.BoxShadow(
+            spread_radius=0,
+            blur_radius=16,
+            color=ft.Colors.with_opacity(0.25, _ACCENT_DIM),
+            offset=ft.Offset(0, 4),
+        ),
+        gradient=ft.LinearGradient(
+            begin=ft.alignment.Alignment.CENTER_LEFT,
+            end=ft.alignment.Alignment.CENTER_RIGHT,
+            colors=[_GRADIENT_START, _GRADIENT_MID],
         ),
     )
 
@@ -471,10 +655,11 @@ def main(page: ft.Page):
                 ft.Row(
                     [analyze_btn, loading_ring],
                     alignment=ft.MainAxisAlignment.END,
-                    spacing=12,
+                    spacing=14,
+                    vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 ),
             ],
-            spacing=14,
+            spacing=16,
         ),
     )
 
@@ -485,7 +670,7 @@ def main(page: ft.Page):
                 method_group,
                 dl_hint,
             ],
-            spacing=12,
+            spacing=14,
         ),
     )
 
@@ -495,9 +680,9 @@ def main(page: ft.Page):
                 _section_label("图片预览"),
                 preview_stack,
             ],
-            spacing=12,
+            spacing=14,
         ),
-        padding=16,
+        padding=20,
     )
 
     # ── AI 识图与分析 UI ────────────────────────────────────────────────────────
@@ -518,6 +703,9 @@ def main(page: ft.Page):
         bgcolor=_SURFACE_ALT,
         border_color=_BORDER,
         focused_border_color=_ACCENT,
+        cursor_color=_ACCENT,
+        border_radius=14,
+        label_style=ft.TextStyle(color=_TEXT_MUTED),
         expand=True,
     )
 
@@ -542,6 +730,8 @@ def main(page: ft.Page):
         bgcolor=_SURFACE_ALT,
         border_color=_BORDER,
         focused_border_color=_ACCENT,
+        border_radius=14,
+        label_style=ft.TextStyle(color=_TEXT_MUTED),
     )
 
     prompt_input = ft.TextField(
@@ -554,6 +744,9 @@ def main(page: ft.Page):
         bgcolor=_SURFACE_ALT,
         border_color=_BORDER,
         focused_border_color=_ACCENT,
+        cursor_color=_ACCENT,
+        border_radius=14,
+        label_style=ft.TextStyle(color=_TEXT_MUTED),
     )
 
     # 加载已保存的 API Key
@@ -578,21 +771,28 @@ def main(page: ft.Page):
                         ft.Row(
                             [
                                 api_key_input,
-                                ft.IconButton(
-                                    icon=ft.Icons.SAVE,
-                                    tooltip="保存 API Key",
-                                    icon_color=_ACCENT,
+                                ft.Container(
+                                    content=ft.Icon(ft.Icons.SAVE_OUTLINED, size=20, color=_ACCENT),
                                     on_click=save_api_key,
-                                )
+                                    tooltip="保存 API Key",
+                                    ink=True,
+                                    ink_color=ft.Colors.with_opacity(0.1, _ACCENT),
+                                    border_radius=12,
+                                    width=44,
+                                    height=44,
+                                    alignment=ft.alignment.Alignment.CENTER,
+                                    bgcolor=ft.Colors.with_opacity(0.06, _ACCENT),
+                                    border=ft.Border.all(1, ft.Colors.with_opacity(0.15, _ACCENT)),
+                                ),
                             ],
-                            spacing=8,
+                            spacing=10,
                         ),
                         model_dropdown,
                         prompt_input,
                     ],
-                    spacing=12,
+                    spacing=14,
                 ),
-                padding=ft.Padding.only(left=8, right=8, bottom=12),
+                padding=ft.Padding.only(left=8, right=8, bottom=14),
             )
         ],
         expanded=False,
@@ -613,20 +813,27 @@ def main(page: ft.Page):
             [
                 ft.Row(
                     [
-                        ft.Icon(ft.Icons.ASSISTANT, color=_ACCENT, size=18),
+                        ft.Container(
+                            content=ft.Icon(ft.Icons.ASSISTANT, color=_ACCENT_BRIGHT, size=18),
+                            bgcolor=ft.Colors.with_opacity(0.10, _ACCENT),
+                            border_radius=10,
+                            width=36,
+                            height=36,
+                            alignment=ft.alignment.Alignment.CENTER,
+                        ),
                         ft.Text("AI 视觉分析报告", size=15, weight=ft.FontWeight.BOLD, color=_TEXT),
                     ],
-                    spacing=10,
+                    spacing=12,
                 ),
-                ft.Divider(color=_BORDER, height=1),
+                ft.Divider(color=_BORDER_SUBTLE, height=1),
                 ai_markdown,
             ],
-            spacing=12,
+            spacing=14,
         ),
-        padding=16,
-        border_radius=12,
+        padding=20,
+        border_radius=16,
         bgcolor=_SURFACE_ALT,
-        border=ft.Border.all(1, _BORDER),
+        border=ft.Border.all(1, ft.Colors.with_opacity(0.15, _ACCENT)),
         visible=False,
     )
 
@@ -677,15 +884,32 @@ def main(page: ft.Page):
 
         threading.Thread(target=run_ai_task, daemon=True).start()
 
-    ai_analyze_btn = ft.FilledButton(
-        "开始 AI 识图",
-        icon=ft.Icons.PSYCHOLOGY,
+    ai_analyze_btn = ft.Container(
+        content=ft.Row(
+            [
+                ft.Icon(ft.Icons.PSYCHOLOGY, size=18, color=ft.Colors.WHITE),
+                ft.Text("开始 AI 识图", size=14, weight=ft.FontWeight.W_600, color=ft.Colors.WHITE),
+            ],
+            spacing=8,
+            alignment=ft.MainAxisAlignment.CENTER,
+        ),
+        bgcolor=_ACCENT_DIM,
+        border_radius=14,
+        padding=ft.Padding.symmetric(horizontal=28, vertical=14),
         on_click=on_ai_analyze,
-        style=ft.ButtonStyle(
-            bgcolor="#4F46E5",
-            color=ft.Colors.WHITE,
-            padding=ft.Padding.symmetric(horizontal=24, vertical=14),
-            shape=ft.RoundedRectangleBorder(radius=12),
+        ink=True,
+        ink_color=ft.Colors.with_opacity(0.15, ft.Colors.WHITE),
+        animate=ft.Animation(200, ft.AnimationCurve.EASE_OUT),
+        shadow=ft.BoxShadow(
+            spread_radius=0,
+            blur_radius=16,
+            color=ft.Colors.with_opacity(0.2, _GRADIENT_END),
+            offset=ft.Offset(0, 4),
+        ),
+        gradient=ft.LinearGradient(
+            begin=ft.alignment.Alignment.CENTER_LEFT,
+            end=ft.alignment.Alignment.CENTER_RIGHT,
+            colors=[_GRADIENT_MID, _GRADIENT_END],
         ),
     )
 
@@ -697,11 +921,12 @@ def main(page: ft.Page):
                 ft.Row(
                     [ai_analyze_btn, ai_loading_ring],
                     alignment=ft.MainAxisAlignment.END,
-                    spacing=12,
+                    spacing=14,
+                    vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 ),
                 ai_output_container,
             ],
-            spacing=14,
+            spacing=16,
         )
     )
 
@@ -715,21 +940,55 @@ def main(page: ft.Page):
         icon_color=_TEXT_MUTED,
     )
 
+    # ── Footer ────────────────────────────────────────────────────────────────
+    footer = ft.Container(
+        content=ft.Column(
+            [
+                ft.Divider(color=_BORDER_SUBTLE, height=1),
+                ft.Row(
+                    [
+                        ft.Text(
+                            "AI Image Quality Analyzer",
+                            size=11,
+                            color=ft.Colors.with_opacity(0.4, _TEXT_MUTED),
+                            weight=ft.FontWeight.W_500,
+                            italic=True,
+                        ),
+                        ft.Text(
+                            "Powered by OpenCV · pyiqa · Gemini",
+                            size=11,
+                            color=ft.Colors.with_opacity(0.35, _TEXT_MUTED),
+                        ),
+                    ],
+                    alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                ),
+            ],
+            spacing=12,
+        ),
+        padding=ft.Padding.only(top=8, bottom=20),
+    )
+
+    # ── Page layout ───────────────────────────────────────────────────────────
     content = ft.Container(
         content=ft.Column(
             [
                 _build_header(),
                 method_card,
                 input_card,
-                ft.Row([status_bar], spacing=0),
+                ft.Row(
+                    [status_bar],
+                    spacing=0,
+                    expand=True,
+                ),
                 preview_card,
                 report_container,
                 ai_card,
-                _card(format_expander, padding=8),
+                _card(format_expander, padding=10),
+                footer,
             ],
             spacing=16,
         ),
-        padding=ft.Padding.symmetric(horizontal=20, vertical=20),
+        padding=ft.Padding.symmetric(horizontal=20, vertical=24),
         width=min(720, page.width) if page.width else 720,
     )
 
