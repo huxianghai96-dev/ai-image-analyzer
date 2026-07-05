@@ -1,8 +1,9 @@
 {
   "categories": {
     "clear": [
-      "test_samples\\clear\\clear_1.jpg",
-      "test_samples\\clear\\clear_2.jpg"
+      "test_samples\\clear\\clear_texture.jpg",
+      "test_samples\\clear\\clear_scene.jpg",
+      "test_samples\\clear\\clear_sharp.jpg"
     ],
     "blur": [
       "test_samples\\blur\\blur_k5.jpg",
@@ -10,12 +11,14 @@
       "test_samples\\blur\\blur_k31.jpg"
     ],
     "overexpose": [
-      "test_samples\\overexpose\\over_1.jpg",
-      "test_samples\\overexpose\\over_2.jpg"
+      "test_samples\\overexpose\\over_1_g1.4.jpg",
+      "test_samples\\overexpose\\over_2_g1.8.jpg",
+      "test_samples\\overexpose\\over_3_g2.2.jpg"
     ],
     "underexpose": [
-      "test_samples\\underexpose\\under_1.jpg",
-      "test_samples\\underexpose\\under_2.jpg"
+      "test_samples\\underexpose\\under_1_g0.25.jpg",
+      "test_samples\\underexpose\\under_2_g0.4.jpg",
+      "test_samples\\underexpose\\under_3_g0.55.jpg"
     ],
     "noise": [
       "test_samples\\noise\\noise_s15.jpg",
@@ -26,7 +29,9 @@
       "test_samples\\large\\large_12mp.jpg"
     ],
     "counterexample": [
-      "test_samples\\counterexample\\noise_masquerade_sharp.jpg"
+      "test_samples\\counterexample\\noise_masquerade_sharp.jpg",
+      "test_samples\\counterexample\\over_sharpened_halo.jpg",
+      "test_samples\\counterexample\\foggy_low_contrast.jpg"
     ],
     "formats": [
       "test_samples\\formats\\sample.png",
@@ -38,9 +43,9 @@
   "human_labels": {
     "clear": "人工：清晰、曝光正常、低噪",
     "blur": "人工：不同程度模糊，越大的 kernel 越模糊",
-    "overexpose": "人工：过曝/高光溢出",
-    "underexpose": "人工：欠曝/偏暗",
+    "overexpose": "人工：过曝/高光溢出，gain 越大越严重",
+    "underexpose": "人工：欠曝/偏暗，gain 越小越暗",
     "noise": "人工：噪点随 sigma 递增",
-    "counterexample": "人工：颗粒噪点重，主观画质差，但 Laplacian 可能虚高"
+    "counterexample": "人工：①颗粒噪点重但 Laplacian 虚高 ②过度锐化产生光晕但清晰度分高 ③雾天低对比但曝光指标正常"
   }
 }

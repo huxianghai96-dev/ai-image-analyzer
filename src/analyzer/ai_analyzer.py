@@ -70,11 +70,25 @@ def analyze_image_with_ai(
         # Fallback to original if resize fails
         pass
 
+    # Convert image to JPEG bytes to avoid format compatibility issues
+    # (e.g., the google-generativeai library doesn't handle WebP format natively)
     try:
-        response = model.generate_content([prompt, image])
+        img_buffer = io.BytesIO()
+        image.save(img_buffer, format="JPEG", quality=90)
+        img_bytes = img_buffer.getvalue()
+    except Exception as exc:
+        raise AIAnalyzerError(f"转换图片为 JPEG 格式失败：{exc}") from exc
+
+    try:
+        image_part = {
+            "mime_type": "image/jpeg",
+            "data": img_bytes,
+        }
+        response = model.generate_content([prompt, image_part])
         if not response.text:
             raise AIAnalyzerError("Gemini 服务返回了空的内容，请尝试更换提示词。")
         return response.text
+    except AIAnalyzerError:
+        raise
     except Exception as exc:
-        # Check for specific error signatures if possible, or raise generic message
         raise AIAnalyzerError(f"API 调用发生错误：{exc}") from exc

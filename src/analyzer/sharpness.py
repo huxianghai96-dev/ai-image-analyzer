@@ -13,23 +13,23 @@ def analyze_sharpness(bgr: np.ndarray) -> dict:
 
     # Empirical mapping from Laplacian variance to 0-100 score.
     # Reference: Pech-Pacheco et al., "Diagnosis of Blur in Digital Images"
-    if variance < 20:
-        score = max(0.0, variance / 20 * 25)
+    if variance < 50:
+        score = max(0.0, variance / 50 * 30)
         label = "严重模糊"
-    elif variance < 80:
-        score = 25 + (variance - 20) / 60 * 25
+    elif variance < 150:
+        score = 30 + (variance - 50) / 100 * 30
         label = "明显模糊"
-    elif variance < 200:
-        score = 50 + (variance - 80) / 120 * 20
+    elif variance < 400:
+        score = 60 + (variance - 150) / 250 * 15
         label = "轻度模糊"
-    elif variance < 500:
-        score = 70 + (variance - 200) / 300 * 15
+    elif variance < 1000:
+        score = 75 + (variance - 400) / 600 * 10
         label = "基本清晰"
-    elif variance < 1200:
-        score = 85 + (variance - 500) / 700 * 10
+    elif variance < 2500:
+        score = 85 + (variance - 1000) / 1500 * 10
         label = "清晰"
     else:
-        score = min(100.0, 95 + (variance - 1200) / 2000 * 5)
+        score = min(100.0, 95 + (variance - 2500) / 3000 * 5)
         label = "非常清晰"
 
     return {

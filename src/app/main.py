@@ -433,6 +433,12 @@ def main(page: ft.Page):
     page.padding = 0
     page.scroll = ft.ScrollMode.AUTO
 
+    # ── State ─────────────────────────────────────────────────────────────────
+    current_source: dict = {"path": None}  # mutable container for closure
+
+    # ── FilePicker (Flet 0.85+ Service, do NOT add to page.overlay) ───────────
+    file_picker = ft.FilePicker()
+
     # ── Preview area ──────────────────────────────────────────────────────────
     preview_image = ft.Image(
         src=_PLACEHOLDER_PNG,
@@ -441,28 +447,57 @@ def main(page: ft.Page):
         visible=False,
         border_radius=16,
     )
+
+    # ── Empty-state onboarding (shown before any image is selected) ───────────
     preview_placeholder = ft.Container(
         content=ft.Column(
             [
                 ft.Container(
-                    content=ft.Icon(ft.Icons.IMAGE_OUTLINED, size=36, color=_TEXT_MUTED),
-                    width=72,
-                    height=72,
-                    border_radius=20,
-                    bgcolor=ft.Colors.with_opacity(0.06, _ACCENT),
+                    content=ft.Icon(ft.Icons.ADD_PHOTO_ALTERNATE_OUTLINED, size=48, color=_ACCENT_BRIGHT),
+                    width=88,
+                    height=88,
+                    border_radius=24,
+                    bgcolor=ft.Colors.with_opacity(0.08, _ACCENT),
                     alignment=ft.alignment.Alignment.CENTER,
+                    border=ft.Border.all(1, ft.Colors.with_opacity(0.15, _ACCENT)),
                 ),
-                ft.Text("分析后将在此显示图片预览", size=13, color=_TEXT_MUTED, weight=ft.FontWeight.W_500),
-                ft.Text("支持 JPEG · PNG · WebP · HEIC", size=11, color=ft.Colors.with_opacity(0.5, _TEXT_MUTED)),
+                ft.Text("点击下方按钮选择图片", size=15, color=_TEXT_SECONDARY, weight=ft.FontWeight.W_600),
+                ft.Text(
+                    "支持 JPEG · PNG · WebP · HEIC  |  本地相册或文件",
+                    size=12,
+                    color=ft.Colors.with_opacity(0.5, _TEXT_MUTED),
+                    text_align=ft.TextAlign.CENTER,
+                ),
+                ft.Container(height=4),
+                ft.Row(
+                    [
+                        ft.Container(
+                            content=ft.Text("≥ 12MP 大图安全加载", size=10, color=_SUCCESS,
+                                            weight=ft.FontWeight.W_500),
+                            bgcolor=ft.Colors.with_opacity(0.08, _SUCCESS),
+                            border_radius=12,
+                            padding=ft.Padding.symmetric(horizontal=10, vertical=4),
+                        ),
+                        ft.Container(
+                            content=ft.Text("离线可用", size=10, color=_ACCENT_BRIGHT,
+                                            weight=ft.FontWeight.W_500),
+                            bgcolor=ft.Colors.with_opacity(0.08, _ACCENT),
+                            border_radius=12,
+                            padding=ft.Padding.symmetric(horizontal=10, vertical=4),
+                        ),
+                    ],
+                    alignment=ft.MainAxisAlignment.CENTER,
+                    spacing=8,
+                ),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            spacing=12,
+            spacing=10,
         ),
         height=300,
         alignment=ft.alignment.Alignment.CENTER,
         border_radius=16,
         bgcolor=_SURFACE_ALT,
-        border=ft.Border.all(1, _BORDER_SUBTLE),
+        border=ft.Border.all(1, ft.Colors.with_opacity(0.15, _ACCENT)),
     )
     preview_stack = ft.Stack([preview_placeholder, preview_image])
 
@@ -489,10 +524,28 @@ def main(page: ft.Page):
     report_container = ft.Column(spacing=8)
     format_info = ft.Text(format_comparison_text(), size=12, color=_TEXT_MUTED)
 
-    # ── Input area ────────────────────────────────────────────────────────────
+    # ── Selected file display ─────────────────────────────────────────────────
+    selected_file_text = ft.Text("", size=12, color=_TEXT_SECONDARY, weight=ft.FontWeight.W_500, expand=True)
+    selected_file_row = ft.Container(
+        content=ft.Row(
+            [
+                ft.Icon(ft.Icons.INSERT_DRIVE_FILE_OUTLINED, size=14, color=_ACCENT),
+                selected_file_text,
+            ],
+            spacing=8,
+            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+        ),
+        padding=ft.Padding.symmetric(horizontal=14, vertical=8),
+        border_radius=10,
+        bgcolor=ft.Colors.with_opacity(0.06, _ACCENT),
+        border=ft.Border.all(1, ft.Colors.with_opacity(0.12, _ACCENT)),
+        visible=False,
+    )
+
+    # ── Path input (alternative / desktop fallback) ───────────────────────────
     path_input = ft.TextField(
-        label="图片路径",
-        hint_text=r"例如：C:\Users\12777\Pictures\demo.jpg",
+        label="或输入图片路径",
+        hint_text=r"例如：C:\Users\Pictures\demo.jpg",
         border_radius=14,
         filled=True,
         bgcolor=_SURFACE_ALT,
@@ -500,6 +553,7 @@ def main(page: ft.Page):
         focused_border_color=_ACCENT,
         cursor_color=_ACCENT,
         label_style=ft.TextStyle(color=_TEXT_MUTED),
+        text_size=13,
         expand=True,
     )
 
@@ -574,14 +628,16 @@ def main(page: ft.Page):
         }
         status_bar.border = ft.Border.all(1, border_colors.get(kind, _BORDER_SUBTLE))
 
-    # ── Analyze callback ──────────────────────────────────────────────────────
+    # ── Core analyze callback ─────────────────────────────────────────────────
     def on_analyze(source: str | bytes):
         method = method_group.value or "traditional"
         try:
             _set_status(f"正在解码与分析（{METHOD_LABELS.get(method, method)}）...", kind="loading", loading=True)
-            analyze_btn.disabled = True
+            pick_btn.disabled = True
+            analyze_path_btn.disabled = True
             preview_placeholder.visible = False
             page.update()
+
             report = analyze_image(source, method=method)
             preview_bgr, info = decode_image(source, for_analysis=False, max_edge=PREVIEW_MAX_EDGE)
             preview_image.src = _bgr_to_png_bytes(preview_bgr, max_edge=PREVIEW_MAX_EDGE)
@@ -597,14 +653,53 @@ def main(page: ft.Page):
             preview_image.visible = False
             preview_placeholder.visible = True
         finally:
-            analyze_btn.disabled = False
+            pick_btn.disabled = False
+            analyze_path_btn.disabled = False
             loading_ring.visible = False
         page.update()
 
-    def analyze_path(_: ft.ControlEvent):
+    # ── Pick button click (Flet 0.85 async handling) ──────────────────────────
+    async def on_pick_click(_: ft.ControlEvent):
+        try:
+            files = await file_picker.pick_files(
+                dialog_title="选择图片",
+                file_type=ft.FilePickerFileType.CUSTOM,
+                allowed_extensions=["jpg", "jpeg", "png", "webp", "heic", "heif"],
+                allow_multiple=False,
+            )
+        except Exception as exc:
+            _set_status(f"文件选择器启动失败：{exc}", kind="error")
+            page.update()
+            return
+
+        if not files or len(files) == 0:
+            return  # user cancelled
+
+        picked = files[0]
+        file_path = picked.path
+        if not file_path:
+            _set_status("无法获取文件路径（移动端可能需要额外权限）", kind="error")
+            page.update()
+            return
+
+        current_source["path"] = file_path
+        fname = Path(file_path).name
+        selected_file_text.value = fname
+        selected_file_row.visible = True
+        path_input.value = file_path
+        _set_status(f"已选择：{fname}，正在分析...", kind="loading", loading=True)
+        page.update()
+
+        # Run analysis on background thread to keep UI responsive
+        def _bg():
+            on_analyze(file_path)
+        page.run_thread(_bg)
+
+    # ── Path input analyze ────────────────────────────────────────────────────
+    def analyze_from_path(_: ft.ControlEvent):
         raw_path = (path_input.value or "").strip().strip('"')
         if not raw_path:
-            _set_status("请先输入本地图片路径", kind="error")
+            _set_status("请先输入本地图片路径或点击「选择图片」", kind="error")
             page.update()
             return
         candidate = Path(raw_path)
@@ -616,29 +711,37 @@ def main(page: ft.Page):
             _set_status(f"不是文件：{candidate}", kind="error")
             page.update()
             return
-        on_analyze(str(candidate))
+        current_source["path"] = str(candidate)
+        selected_file_text.value = candidate.name
+        selected_file_row.visible = True
+        page.update()
 
-    analyze_btn = ft.Container(
+        def _bg():
+            on_analyze(str(candidate))
+        page.run_thread(_bg)
+
+    # ── Primary pick button (hero CTA) ────────────────────────────────────────
+    pick_btn = ft.Container(
         content=ft.Row(
             [
-                ft.Icon(ft.Icons.AUTO_AWESOME, size=18, color=ft.Colors.WHITE),
-                ft.Text("开始分析", size=14, weight=ft.FontWeight.W_600, color=ft.Colors.WHITE),
+                ft.Icon(ft.Icons.PHOTO_LIBRARY_OUTLINED, size=20, color=ft.Colors.WHITE),
+                ft.Text("选择图片", size=15, weight=ft.FontWeight.W_700, color=ft.Colors.WHITE),
             ],
-            spacing=8,
+            spacing=10,
             alignment=ft.MainAxisAlignment.CENTER,
         ),
         bgcolor=_ACCENT_DIM,
-        border_radius=14,
-        padding=ft.Padding.symmetric(horizontal=28, vertical=14),
-        on_click=analyze_path,
+        border_radius=16,
+        padding=ft.Padding.symmetric(horizontal=36, vertical=16),
+        on_click=on_pick_click,
         ink=True,
         ink_color=ft.Colors.with_opacity(0.15, ft.Colors.WHITE),
         animate=ft.Animation(200, ft.AnimationCurve.EASE_OUT),
         shadow=ft.BoxShadow(
             spread_radius=0,
-            blur_radius=16,
-            color=ft.Colors.with_opacity(0.25, _ACCENT_DIM),
-            offset=ft.Offset(0, 4),
+            blur_radius=24,
+            color=ft.Colors.with_opacity(0.3, _ACCENT_DIM),
+            offset=ft.Offset(0, 6),
         ),
         gradient=ft.LinearGradient(
             begin=ft.alignment.Alignment.CENTER_LEFT,
@@ -647,19 +750,61 @@ def main(page: ft.Page):
         ),
     )
 
+    # ── Analyze-from-path button ──────────────────────────────────────────────
+    analyze_path_btn = ft.Container(
+        content=ft.Row(
+            [
+                ft.Icon(ft.Icons.AUTO_AWESOME, size=16, color=ft.Colors.WHITE),
+                ft.Text("分析", size=13, weight=ft.FontWeight.W_600, color=ft.Colors.WHITE),
+            ],
+            spacing=6,
+            alignment=ft.MainAxisAlignment.CENTER,
+        ),
+        bgcolor=_ACCENT_DIM,
+        border_radius=12,
+        padding=ft.Padding.symmetric(horizontal=20, vertical=12),
+        on_click=analyze_from_path,
+        ink=True,
+        ink_color=ft.Colors.with_opacity(0.15, ft.Colors.WHITE),
+        gradient=ft.LinearGradient(
+            begin=ft.alignment.Alignment.CENTER_LEFT,
+            end=ft.alignment.Alignment.CENTER_RIGHT,
+            colors=[_GRADIENT_MID, _GRADIENT_END],
+        ),
+    )
+
+    # ── Input card (FilePicker + path fallback) ───────────────────────────────
     input_card = _card(
         ft.Column(
             [
                 _section_label("选择图片"),
-                path_input,
+                # Primary: file picker button
                 ft.Row(
-                    [analyze_btn, loading_ring],
-                    alignment=ft.MainAxisAlignment.END,
-                    spacing=14,
+                    [pick_btn],
+                    alignment=ft.MainAxisAlignment.CENTER,
+                ),
+                selected_file_row,
+                # Divider with "or"
+                ft.Row(
+                    [
+                        ft.Container(expand=True, height=1, bgcolor=_BORDER_SUBTLE),
+                        ft.Text("或", size=11, color=_TEXT_MUTED, weight=ft.FontWeight.W_500),
+                        ft.Container(expand=True, height=1, bgcolor=_BORDER_SUBTLE),
+                    ],
+                    spacing=12,
+                    vertical_alignment=ft.CrossAxisAlignment.CENTER,
+                ),
+                # Secondary: path input
+                ft.Row(
+                    [
+                        path_input,
+                        analyze_path_btn,
+                    ],
+                    spacing=10,
                     vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 ),
             ],
-            spacing=16,
+            spacing=14,
         ),
     )
 
@@ -840,12 +985,17 @@ def main(page: ft.Page):
     ai_loading_ring = ft.ProgressRing(width=18, height=18, stroke_width=2, color=_ACCENT, visible=False)
 
     def on_ai_analyze(_: ft.ControlEvent):
-        raw_path = (path_input.value or "").strip().strip('"')
-        if not raw_path:
-            _set_status("请先输入本地图片路径", kind="error")
-            page.update()
-            return
-        candidate = Path(raw_path)
+        source_path = current_source.get("path")
+        if not source_path:
+            raw_path = (path_input.value or "").strip().strip('"')
+            if raw_path and Path(raw_path).is_file():
+                source_path = raw_path
+            else:
+                _set_status("请先选择或输入一张图片", kind="error")
+                page.update()
+                return
+
+        candidate = Path(source_path)
         if not candidate.exists() or not candidate.is_file():
             _set_status(f"文件不存在或不是有效文件：{candidate}", kind="error")
             page.update()
@@ -882,7 +1032,7 @@ def main(page: ft.Page):
                 ai_loading_ring.visible = False
                 page.update()
 
-        threading.Thread(target=run_ai_task, daemon=True).start()
+        page.run_thread(run_ai_task)
 
     ai_analyze_btn = ft.Container(
         content=ft.Row(
@@ -973,12 +1123,13 @@ def main(page: ft.Page):
         content=ft.Column(
             [
                 _build_header(),
-                method_card,
                 input_card,
+                method_card,
                 ft.Row(
-                    [status_bar],
-                    spacing=0,
+                    [status_bar, loading_ring],
+                    spacing=10,
                     expand=True,
+                    vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 ),
                 preview_card,
                 report_container,
