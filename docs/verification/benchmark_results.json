@@ -6,7 +6,7 @@
       "method": "traditional",
       "overall": 79.0,
       "grade": "B 良好",
-      "elapsed_ms": 82.6,
+      "elapsed_ms": 73.0,
       "summary": "清晰度：非常清晰 (已校正噪点)；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 78.8,
@@ -27,7 +27,7 @@
       "method": "dl",
       "overall": 48.4,
       "grade": "D 较差",
-      "elapsed_ms": 385.6,
+      "elapsed_ms": 374.9,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 48.4
@@ -43,7 +43,7 @@
       "method": "hybrid",
       "overall": 63.7,
       "grade": "C 一般",
-      "elapsed_ms": 370.7,
+      "elapsed_ms": 355.6,
       "summary": "清晰度：非常清晰 (已校正噪点)；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 78.8,
@@ -65,7 +65,7 @@
       "method": "traditional",
       "overall": 84.8,
       "grade": "B 良好",
-      "elapsed_ms": 80.5,
+      "elapsed_ms": 74.2,
       "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 75.5,
@@ -86,7 +86,7 @@
       "method": "dl",
       "overall": 51.5,
       "grade": "D 较差",
-      "elapsed_ms": 284.0,
+      "elapsed_ms": 282.1,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 51.5
@@ -102,7 +102,7 @@
       "method": "hybrid",
       "overall": 68.2,
       "grade": "C 一般",
-      "elapsed_ms": 319.2,
+      "elapsed_ms": 316.4,
       "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 75.5,
@@ -124,7 +124,7 @@
       "method": "traditional",
       "overall": 85.6,
       "grade": "B 良好",
-      "elapsed_ms": 83.6,
+      "elapsed_ms": 72.8,
       "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 78.7,
@@ -145,7 +145,7 @@
       "method": "dl",
       "overall": 56.3,
       "grade": "D 较差",
-      "elapsed_ms": 265.5,
+      "elapsed_ms": 256.6,
       "summary": "深度学习画质：画质一般。",
       "dimensions": {
         "deep_learning": 56.3
@@ -161,7 +161,7 @@
       "method": "hybrid",
       "overall": 70.9,
       "grade": "C 一般",
-      "elapsed_ms": 320.0,
+      "elapsed_ms": 300.8,
       "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好；深度学习画质：画质一般。",
       "dimensions": {
         "sharpness": 78.7,
@@ -183,7 +183,7 @@
       "method": "traditional",
       "overall": 64.2,
       "grade": "C 一般",
-      "elapsed_ms": 70.5,
+      "elapsed_ms": 62.8,
       "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 27.3,
@@ -204,7 +204,7 @@
       "method": "dl",
       "overall": 36.6,
       "grade": "E 很差",
-      "elapsed_ms": 258.6,
+      "elapsed_ms": 222.6,
       "summary": "深度学习画质：画质较差。",
       "dimensions": {
         "deep_learning": 36.6
@@ -220,7 +220,7 @@
       "method": "hybrid",
       "overall": 50.4,
       "grade": "D 较差",
-      "elapsed_ms": 318.8,
+      "elapsed_ms": 279.2,
       "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质较差。",
       "dimensions": {
         "sharpness": 27.3,
@@ -242,7 +242,7 @@
       "method": "traditional",
       "overall": 49.0,
       "grade": "D 较差",
-      "elapsed_ms": 65.1,
+      "elapsed_ms": 58.2,
       "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 5.3,
@@ -263,7 +263,7 @@
       "method": "dl",
       "overall": 36.6,
       "grade": "E 很差",
-      "elapsed_ms": 252.4,
+      "elapsed_ms": 225.0,
       "summary": "深度学习画质：画质较差。",
       "dimensions": {
         "deep_learning": 36.6
@@ -279,7 +279,7 @@
       "method": "hybrid",
       "overall": 42.8,
       "grade": "D 较差",
-      "elapsed_ms": 314.2,
+      "elapsed_ms": 277.7,
       "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质较差。",
       "dimensions": {
         "sharpness": 5.3,
@@ -301,7 +301,7 @@
       "method": "traditional",
       "overall": 47.5,
       "grade": "D 较差",
-      "elapsed_ms": 63.7,
+      "elapsed_ms": 52.6,
       "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 3.0,
@@ -322,7 +322,7 @@
       "method": "dl",
       "overall": 40.6,
       "grade": "D 较差",
-      "elapsed_ms": 251.8,
+      "elapsed_ms": 226.4,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 40.6
@@ -338,7 +338,7 @@
       "method": "hybrid",
       "overall": 44.0,
       "grade": "D 较差",
-      "elapsed_ms": 300.3,
+      "elapsed_ms": 256.5,
       "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 3.0,
@@ -360,7 +360,7 @@
       "method": "traditional",
       "overall": 84.1,
       "grade": "B 良好",
-      "elapsed_ms": 67.3,
+      "elapsed_ms": 59.6,
       "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 78.9,
@@ -381,7 +381,7 @@
       "method": "dl",
       "overall": 53.6,
       "grade": "D 较差",
-      "elapsed_ms": 253.0,
+      "elapsed_ms": 242.8,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 53.6
@@ -397,7 +397,7 @@
       "method": "hybrid",
       "overall": 68.9,
       "grade": "C 一般",
-      "elapsed_ms": 324.0,
+      "elapsed_ms": 289.6,
       "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 78.9,
@@ -419,7 +419,7 @@
       "method": "traditional",
       "overall": 78.6,
       "grade": "B 良好",
-      "elapsed_ms": 68.0,
+      "elapsed_ms": 58.7,
       "summary": "清晰度：基本清晰；曝光：整体偏亮；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 77.8,
@@ -440,7 +440,7 @@
       "method": "dl",
       "overall": 51.3,
       "grade": "D 较差",
-      "elapsed_ms": 246.2,
+      "elapsed_ms": 225.2,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 51.3
@@ -456,7 +456,7 @@
       "method": "hybrid",
       "overall": 65.0,
       "grade": "C 一般",
-      "elapsed_ms": 312.5,
+      "elapsed_ms": 297.0,
       "summary": "清晰度：基本清晰；曝光：整体偏亮；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 77.8,
@@ -478,7 +478,7 @@
       "method": "traditional",
       "overall": 64.4,
       "grade": "C 一般",
-      "elapsed_ms": 74.4,
+      "elapsed_ms": 61.3,
       "summary": "清晰度：基本清晰；曝光：过曝；噪点：噪点极低；对比度：对比度一般。",
       "dimensions": {
         "sharpness": 78.6,
@@ -499,7 +499,7 @@
       "method": "dl",
       "overall": 47.6,
       "grade": "D 较差",
-      "elapsed_ms": 257.2,
+      "elapsed_ms": 242.7,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 47.6
@@ -515,7 +515,7 @@
       "method": "hybrid",
       "overall": 56.0,
       "grade": "D 较差",
-      "elapsed_ms": 311.1,
+      "elapsed_ms": 278.3,
       "summary": "清晰度：基本清晰；曝光：过曝；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 78.6,
@@ -537,7 +537,7 @@
       "method": "traditional",
       "overall": 26.9,
       "grade": "E 很差",
-      "elapsed_ms": 66.0,
+      "elapsed_ms": 55.2,
       "summary": "清晰度：严重模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低。",
       "dimensions": {
         "sharpness": 13.0,
@@ -558,7 +558,7 @@
       "method": "dl",
       "overall": 4.9,
       "grade": "E 很差",
-      "elapsed_ms": 254.1,
+      "elapsed_ms": 229.8,
       "summary": "深度学习画质：画质较差。",
       "dimensions": {
         "deep_learning": 4.9
@@ -574,7 +574,7 @@
       "method": "hybrid",
       "overall": 15.9,
       "grade": "E 很差",
-      "elapsed_ms": 311.7,
+      "elapsed_ms": 276.4,
       "summary": "清晰度：严重模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质较差。",
       "dimensions": {
         "sharpness": 13.0,
@@ -596,7 +596,7 @@
       "method": "traditional",
       "overall": 48.3,
       "grade": "D 较差",
-      "elapsed_ms": 68.7,
+      "elapsed_ms": 59.2,
       "summary": "清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低。",
       "dimensions": {
         "sharpness": 31.5,
@@ -617,7 +617,7 @@
       "method": "dl",
       "overall": 33.1,
       "grade": "E 很差",
-      "elapsed_ms": 258.4,
+      "elapsed_ms": 230.9,
       "summary": "深度学习画质：画质较差。",
       "dimensions": {
         "deep_learning": 33.1
@@ -633,7 +633,7 @@
       "method": "hybrid",
       "overall": 40.7,
       "grade": "D 较差",
-      "elapsed_ms": 303.5,
+      "elapsed_ms": 291.9,
       "summary": "清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质较差。",
       "dimensions": {
         "sharpness": 31.5,
@@ -655,7 +655,7 @@
       "method": "traditional",
       "overall": 64.3,
       "grade": "C 一般",
-      "elapsed_ms": 61.0,
+      "elapsed_ms": 60.2,
       "summary": "清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度一般。",
       "dimensions": {
         "sharpness": 46.4,
@@ -676,7 +676,7 @@
       "method": "dl",
       "overall": 43.2,
       "grade": "D 较差",
-      "elapsed_ms": 244.0,
+      "elapsed_ms": 236.7,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 43.2
@@ -692,7 +692,7 @@
       "method": "hybrid",
       "overall": 53.7,
       "grade": "D 较差",
-      "elapsed_ms": 299.2,
+      "elapsed_ms": 289.8,
       "summary": "清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 46.4,
@@ -714,7 +714,7 @@
       "method": "traditional",
       "overall": 84.8,
       "grade": "B 良好",
-      "elapsed_ms": 77.6,
+      "elapsed_ms": 69.7,
       "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 89.7,
@@ -735,7 +735,7 @@
       "method": "dl",
       "overall": 56.6,
       "grade": "D 较差",
-      "elapsed_ms": 263.3,
+      "elapsed_ms": 234.7,
       "summary": "深度学习画质：画质一般。",
       "dimensions": {
         "deep_learning": 56.6
@@ -751,7 +751,7 @@
       "method": "hybrid",
       "overall": 70.7,
       "grade": "C 一般",
-      "elapsed_ms": 322.6,
+      "elapsed_ms": 285.1,
       "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好；深度学习画质：画质一般。",
       "dimensions": {
         "sharpness": 89.7,
@@ -773,7 +773,7 @@
       "method": "traditional",
       "overall": 64.4,
       "grade": "C 一般",
-      "elapsed_ms": 77.4,
+      "elapsed_ms": 64.4,
       "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 56.4,
@@ -794,7 +794,7 @@
       "method": "dl",
       "overall": 62.4,
       "grade": "C 一般",
-      "elapsed_ms": 264.1,
+      "elapsed_ms": 246.1,
       "summary": "深度学习画质：画质一般。",
       "dimensions": {
         "deep_learning": 62.4
@@ -810,7 +810,7 @@
       "method": "hybrid",
       "overall": 63.4,
       "grade": "C 一般",
-      "elapsed_ms": 299.4,
+      "elapsed_ms": 277.4,
       "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。",
       "dimensions": {
         "sharpness": 56.4,
@@ -832,7 +832,7 @@
       "method": "traditional",
       "overall": 38.2,
       "grade": "E 很差",
-      "elapsed_ms": 82.7,
+      "elapsed_ms": 72.1,
       "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 26.7,
@@ -853,7 +853,7 @@
       "method": "dl",
       "overall": 69.1,
       "grade": "C 一般",
-      "elapsed_ms": 261.3,
+      "elapsed_ms": 235.8,
       "summary": "深度学习画质：画质一般。",
       "dimensions": {
         "deep_learning": 69.1
@@ -869,7 +869,7 @@
       "method": "hybrid",
       "overall": 53.6,
       "grade": "D 较差",
-      "elapsed_ms": 326.4,
+      "elapsed_ms": 291.6,
       "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。",
       "dimensions": {
         "sharpness": 26.7,
@@ -891,7 +891,7 @@
       "method": "traditional",
       "overall": 81.7,
       "grade": "B 良好",
-      "elapsed_ms": 122.1,
+      "elapsed_ms": 106.0,
       "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 65.1,
@@ -912,7 +912,7 @@
       "method": "dl",
       "overall": 52.5,
       "grade": "D 较差",
-      "elapsed_ms": 301.5,
+      "elapsed_ms": 275.9,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 52.5
@@ -928,7 +928,7 @@
       "method": "hybrid",
       "overall": 67.1,
       "grade": "C 一般",
-      "elapsed_ms": 362.6,
+      "elapsed_ms": 345.5,
       "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 65.1,
@@ -950,7 +950,7 @@
       "method": "traditional",
       "overall": 48.3,
       "grade": "D 较差",
-      "elapsed_ms": 80.5,
+      "elapsed_ms": 70.8,
       "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 33.2,
@@ -971,7 +971,7 @@
       "method": "dl",
       "overall": 61.4,
       "grade": "C 一般",
-      "elapsed_ms": 259.9,
+      "elapsed_ms": 236.8,
       "summary": "深度学习画质：画质一般。",
       "dimensions": {
         "deep_learning": 61.4
@@ -987,7 +987,7 @@
       "method": "hybrid",
       "overall": 54.9,
       "grade": "D 较差",
-      "elapsed_ms": 322.2,
+      "elapsed_ms": 288.5,
       "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。",
       "dimensions": {
         "sharpness": 33.2,
@@ -1009,7 +1009,7 @@
       "method": "traditional",
       "overall": 88.7,
       "grade": "B 良好",
-      "elapsed_ms": 70.7,
+      "elapsed_ms": 62.4,
       "summary": "清晰度：清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 94.5,
@@ -1030,7 +1030,7 @@
       "method": "dl",
       "overall": 68.1,
       "grade": "C 一般",
-      "elapsed_ms": 239.1,
+      "elapsed_ms": 236.2,
       "summary": "深度学习画质：画质一般。",
       "dimensions": {
         "deep_learning": 68.1
@@ -1046,7 +1046,7 @@
       "method": "hybrid",
       "overall": 78.4,
       "grade": "B 良好",
-      "elapsed_ms": 313.7,
+      "elapsed_ms": 299.8,
       "summary": "清晰度：清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好；深度学习画质：画质一般。",
       "dimensions": {
         "sharpness": 94.5,
@@ -1068,7 +1068,7 @@
       "method": "traditional",
       "overall": 45.6,
       "grade": "D 较差",
-      "elapsed_ms": 63.9,
+      "elapsed_ms": 58.3,
       "summary": "清晰度：严重模糊；曝光：整体偏亮；噪点：噪点极低；对比度：对比度偏低。",
       "dimensions": {
         "sharpness": 25.4,
@@ -1089,7 +1089,7 @@
       "method": "dl",
       "overall": 52.0,
       "grade": "D 较差",
-      "elapsed_ms": 249.5,
+      "elapsed_ms": 219.2,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 52.0
@@ -1105,7 +1105,7 @@
       "method": "hybrid",
       "overall": 48.8,
       "grade": "D 较差",
-      "elapsed_ms": 317.9,
+      "elapsed_ms": 282.5,
       "summary": "清晰度：严重模糊；曝光：整体偏亮；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 25.4,
@@ -1127,7 +1127,7 @@
       "method": "traditional",
       "overall": 84.5,
       "grade": "B 良好",
-      "elapsed_ms": 100.8,
+      "elapsed_ms": 86.6,
       "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 74.2,
@@ -1148,7 +1148,7 @@
       "method": "dl",
       "overall": 51.8,
       "grade": "D 较差",
-      "elapsed_ms": 283.1,
+      "elapsed_ms": 240.6,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 51.8
@@ -1164,7 +1164,7 @@
       "method": "hybrid",
       "overall": 68.1,
       "grade": "C 一般",
-      "elapsed_ms": 344.4,
+      "elapsed_ms": 311.6,
       "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 74.2,
@@ -1186,7 +1186,7 @@
       "method": "traditional",
       "overall": 84.5,
       "grade": "B 良好",
-      "elapsed_ms": 109.3,
+      "elapsed_ms": 94.8,
       "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 74.2,
@@ -1207,7 +1207,7 @@
       "method": "dl",
       "overall": 51.8,
       "grade": "D 较差",
-      "elapsed_ms": 289.8,
+      "elapsed_ms": 275.2,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 51.8
@@ -1223,7 +1223,7 @@
       "method": "hybrid",
       "overall": 68.1,
       "grade": "C 一般",
-      "elapsed_ms": 341.6,
+      "elapsed_ms": 325.0,
       "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 74.2,
@@ -1245,7 +1245,7 @@
       "method": "traditional",
       "overall": 84.3,
       "grade": "B 良好",
-      "elapsed_ms": 67.5,
+      "elapsed_ms": 67.2,
       "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 73.5,
@@ -1266,7 +1266,7 @@
       "method": "dl",
       "overall": 51.1,
       "grade": "D 较差",
-      "elapsed_ms": 245.4,
+      "elapsed_ms": 225.5,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 51.1
@@ -1282,7 +1282,7 @@
       "method": "hybrid",
       "overall": 67.7,
       "grade": "C 一般",
-      "elapsed_ms": 306.5,
+      "elapsed_ms": 285.2,
       "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 73.5,
@@ -1304,7 +1304,7 @@
       "method": "traditional",
       "overall": 83.5,
       "grade": "B 良好",
-      "elapsed_ms": 151.1,
+      "elapsed_ms": 125.7,
       "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
       "dimensions": {
         "sharpness": 71.0,
@@ -1325,7 +1325,7 @@
       "method": "dl",
       "overall": 52.5,
       "grade": "D 较差",
-      "elapsed_ms": 302.7,
+      "elapsed_ms": 296.5,
       "summary": "深度学习画质：画质偏差。",
       "dimensions": {
         "deep_learning": 52.5
@@ -1341,7 +1341,7 @@
       "method": "hybrid",
       "overall": 68.0,
       "grade": "C 一般",
-      "elapsed_ms": 378.3,
+      "elapsed_ms": 333.3,
       "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
       "dimensions": {
         "sharpness": 71.0,
@@ -1368,7 +1368,7 @@
             "method": "traditional",
             "overall": 79.0,
             "grade": "B 良好",
-            "elapsed_ms": 82.6,
+            "elapsed_ms": 73.0,
             "summary": "清晰度：非常清晰 (已校正噪点)；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 78.8,
@@ -1389,7 +1389,7 @@
             "method": "traditional",
             "overall": 84.8,
             "grade": "B 良好",
-            "elapsed_ms": 80.5,
+            "elapsed_ms": 74.2,
             "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 75.5,
@@ -1410,7 +1410,7 @@
             "method": "traditional",
             "overall": 85.6,
             "grade": "B 良好",
-            "elapsed_ms": 83.6,
+            "elapsed_ms": 72.8,
             "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 78.7,
@@ -1428,7 +1428,7 @@
         ],
         "count": 3,
         "avg_overall": 83.1,
-        "avg_elapsed_ms": 82.2
+        "avg_elapsed_ms": 73.3
       },
       "blur": {
         "entries": [
@@ -1438,7 +1438,7 @@
             "method": "traditional",
             "overall": 64.2,
             "grade": "C 一般",
-            "elapsed_ms": 70.5,
+            "elapsed_ms": 62.8,
             "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 27.3,
@@ -1459,7 +1459,7 @@
             "method": "traditional",
             "overall": 49.0,
             "grade": "D 较差",
-            "elapsed_ms": 65.1,
+            "elapsed_ms": 58.2,
             "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 5.3,
@@ -1480,7 +1480,7 @@
             "method": "traditional",
             "overall": 47.5,
             "grade": "D 较差",
-            "elapsed_ms": 63.7,
+            "elapsed_ms": 52.6,
             "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 3.0,
@@ -1498,7 +1498,7 @@
         ],
         "count": 3,
         "avg_overall": 53.6,
-        "avg_elapsed_ms": 66.4
+        "avg_elapsed_ms": 57.9
       },
       "overexpose": {
         "entries": [
@@ -1508,7 +1508,7 @@
             "method": "traditional",
             "overall": 84.1,
             "grade": "B 良好",
-            "elapsed_ms": 67.3,
+            "elapsed_ms": 59.6,
             "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 78.9,
@@ -1529,7 +1529,7 @@
             "method": "traditional",
             "overall": 78.6,
             "grade": "B 良好",
-            "elapsed_ms": 68.0,
+            "elapsed_ms": 58.7,
             "summary": "清晰度：基本清晰；曝光：整体偏亮；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 77.8,
@@ -1550,7 +1550,7 @@
             "method": "traditional",
             "overall": 64.4,
             "grade": "C 一般",
-            "elapsed_ms": 74.4,
+            "elapsed_ms": 61.3,
             "summary": "清晰度：基本清晰；曝光：过曝；噪点：噪点极低；对比度：对比度一般。",
             "dimensions": {
               "sharpness": 78.6,
@@ -1568,7 +1568,7 @@
         ],
         "count": 3,
         "avg_overall": 75.7,
-        "avg_elapsed_ms": 69.9
+        "avg_elapsed_ms": 59.9
       },
       "underexpose": {
         "entries": [
@@ -1578,7 +1578,7 @@
             "method": "traditional",
             "overall": 26.9,
             "grade": "E 很差",
-            "elapsed_ms": 66.0,
+            "elapsed_ms": 55.2,
             "summary": "清晰度：严重模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低。",
             "dimensions": {
               "sharpness": 13.0,
@@ -1599,7 +1599,7 @@
             "method": "traditional",
             "overall": 48.3,
             "grade": "D 较差",
-            "elapsed_ms": 68.7,
+            "elapsed_ms": 59.2,
             "summary": "清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低。",
             "dimensions": {
               "sharpness": 31.5,
@@ -1620,7 +1620,7 @@
             "method": "traditional",
             "overall": 64.3,
             "grade": "C 一般",
-            "elapsed_ms": 61.0,
+            "elapsed_ms": 60.2,
             "summary": "清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度一般。",
             "dimensions": {
               "sharpness": 46.4,
@@ -1638,7 +1638,7 @@
         ],
         "count": 3,
         "avg_overall": 46.5,
-        "avg_elapsed_ms": 65.2
+        "avg_elapsed_ms": 58.2
       },
       "noise": {
         "entries": [
@@ -1648,7 +1648,7 @@
             "method": "traditional",
             "overall": 84.8,
             "grade": "B 良好",
-            "elapsed_ms": 77.6,
+            "elapsed_ms": 69.7,
             "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 89.7,
@@ -1669,7 +1669,7 @@
             "method": "traditional",
             "overall": 64.4,
             "grade": "C 一般",
-            "elapsed_ms": 77.4,
+            "elapsed_ms": 64.4,
             "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 56.4,
@@ -1690,7 +1690,7 @@
             "method": "traditional",
             "overall": 38.2,
             "grade": "E 很差",
-            "elapsed_ms": 82.7,
+            "elapsed_ms": 72.1,
             "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 26.7,
@@ -1708,7 +1708,7 @@
         ],
         "count": 3,
         "avg_overall": 62.5,
-        "avg_elapsed_ms": 79.2
+        "avg_elapsed_ms": 68.7
       },
       "large": {
         "entries": [
@@ -1718,7 +1718,7 @@
             "method": "traditional",
             "overall": 81.7,
             "grade": "B 良好",
-            "elapsed_ms": 122.1,
+            "elapsed_ms": 106.0,
             "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 65.1,
@@ -1736,7 +1736,7 @@
         ],
         "count": 1,
         "avg_overall": 81.7,
-        "avg_elapsed_ms": 122.1
+        "avg_elapsed_ms": 106.0
       },
       "counterexample": {
         "entries": [
@@ -1746,7 +1746,7 @@
             "method": "traditional",
             "overall": 48.3,
             "grade": "D 较差",
-            "elapsed_ms": 80.5,
+            "elapsed_ms": 70.8,
             "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 33.2,
@@ -1767,7 +1767,7 @@
             "method": "traditional",
             "overall": 88.7,
             "grade": "B 良好",
-            "elapsed_ms": 70.7,
+            "elapsed_ms": 62.4,
             "summary": "清晰度：清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 94.5,
@@ -1788,7 +1788,7 @@
             "method": "traditional",
             "overall": 45.6,
             "grade": "D 较差",
-            "elapsed_ms": 63.9,
+            "elapsed_ms": 58.3,
             "summary": "清晰度：严重模糊；曝光：整体偏亮；噪点：噪点极低；对比度：对比度偏低。",
             "dimensions": {
               "sharpness": 25.4,
@@ -1806,7 +1806,7 @@
         ],
         "count": 3,
         "avg_overall": 60.9,
-        "avg_elapsed_ms": 71.7
+        "avg_elapsed_ms": 63.8
       },
       "formats": {
         "entries": [
@@ -1816,7 +1816,7 @@
             "method": "traditional",
             "overall": 84.5,
             "grade": "B 良好",
-            "elapsed_ms": 100.8,
+            "elapsed_ms": 86.6,
             "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 74.2,
@@ -1837,7 +1837,7 @@
             "method": "traditional",
             "overall": 84.5,
             "grade": "B 良好",
-            "elapsed_ms": 109.3,
+            "elapsed_ms": 94.8,
             "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 74.2,
@@ -1858,7 +1858,7 @@
             "method": "traditional",
             "overall": 84.3,
             "grade": "B 良好",
-            "elapsed_ms": 67.5,
+            "elapsed_ms": 67.2,
             "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 73.5,
@@ -1879,7 +1879,7 @@
             "method": "traditional",
             "overall": 83.5,
             "grade": "B 良好",
-            "elapsed_ms": 151.1,
+            "elapsed_ms": 125.7,
             "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。",
             "dimensions": {
               "sharpness": 71.0,
@@ -1897,7 +1897,7 @@
         ],
         "count": 4,
         "avg_overall": 84.2,
-        "avg_elapsed_ms": 107.2
+        "avg_elapsed_ms": 93.6
       }
     },
     "dl": {
@@ -1909,7 +1909,7 @@
             "method": "dl",
             "overall": 48.4,
             "grade": "D 较差",
-            "elapsed_ms": 385.6,
+            "elapsed_ms": 374.9,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 48.4
@@ -1925,7 +1925,7 @@
             "method": "dl",
             "overall": 51.5,
             "grade": "D 较差",
-            "elapsed_ms": 284.0,
+            "elapsed_ms": 282.1,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 51.5
@@ -1941,7 +1941,7 @@
             "method": "dl",
             "overall": 56.3,
             "grade": "D 较差",
-            "elapsed_ms": 265.5,
+            "elapsed_ms": 256.6,
             "summary": "深度学习画质：画质一般。",
             "dimensions": {
               "deep_learning": 56.3
@@ -1954,7 +1954,7 @@
         ],
         "count": 3,
         "avg_overall": 52.1,
-        "avg_elapsed_ms": 311.7
+        "avg_elapsed_ms": 304.5
       },
       "blur": {
         "entries": [
@@ -1964,7 +1964,7 @@
             "method": "dl",
             "overall": 36.6,
             "grade": "E 很差",
-            "elapsed_ms": 258.6,
+            "elapsed_ms": 222.6,
             "summary": "深度学习画质：画质较差。",
             "dimensions": {
               "deep_learning": 36.6
@@ -1980,7 +1980,7 @@
             "method": "dl",
             "overall": 36.6,
             "grade": "E 很差",
-            "elapsed_ms": 252.4,
+            "elapsed_ms": 225.0,
             "summary": "深度学习画质：画质较差。",
             "dimensions": {
               "deep_learning": 36.6
@@ -1996,7 +1996,7 @@
             "method": "dl",
             "overall": 40.6,
             "grade": "D 较差",
-            "elapsed_ms": 251.8,
+            "elapsed_ms": 226.4,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 40.6
@@ -2009,7 +2009,7 @@
         ],
         "count": 3,
         "avg_overall": 37.9,
-        "avg_elapsed_ms": 254.3
+        "avg_elapsed_ms": 224.7
       },
       "overexpose": {
         "entries": [
@@ -2019,7 +2019,7 @@
             "method": "dl",
             "overall": 53.6,
             "grade": "D 较差",
-            "elapsed_ms": 253.0,
+            "elapsed_ms": 242.8,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 53.6
@@ -2035,7 +2035,7 @@
             "method": "dl",
             "overall": 51.3,
             "grade": "D 较差",
-            "elapsed_ms": 246.2,
+            "elapsed_ms": 225.2,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 51.3
@@ -2051,7 +2051,7 @@
             "method": "dl",
             "overall": 47.6,
             "grade": "D 较差",
-            "elapsed_ms": 257.2,
+            "elapsed_ms": 242.7,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 47.6
@@ -2064,7 +2064,7 @@
         ],
         "count": 3,
         "avg_overall": 50.8,
-        "avg_elapsed_ms": 252.1
+        "avg_elapsed_ms": 236.9
       },
       "underexpose": {
         "entries": [
@@ -2074,7 +2074,7 @@
             "method": "dl",
             "overall": 4.9,
             "grade": "E 很差",
-            "elapsed_ms": 254.1,
+            "elapsed_ms": 229.8,
             "summary": "深度学习画质：画质较差。",
             "dimensions": {
               "deep_learning": 4.9
@@ -2090,7 +2090,7 @@
             "method": "dl",
             "overall": 33.1,
             "grade": "E 很差",
-            "elapsed_ms": 258.4,
+            "elapsed_ms": 230.9,
             "summary": "深度学习画质：画质较差。",
             "dimensions": {
               "deep_learning": 33.1
@@ -2106,7 +2106,7 @@
             "method": "dl",
             "overall": 43.2,
             "grade": "D 较差",
-            "elapsed_ms": 244.0,
+            "elapsed_ms": 236.7,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 43.2
@@ -2119,7 +2119,7 @@
         ],
         "count": 3,
         "avg_overall": 27.1,
-        "avg_elapsed_ms": 252.2
+        "avg_elapsed_ms": 232.5
       },
       "noise": {
         "entries": [
@@ -2129,7 +2129,7 @@
             "method": "dl",
             "overall": 56.6,
             "grade": "D 较差",
-            "elapsed_ms": 263.3,
+            "elapsed_ms": 234.7,
             "summary": "深度学习画质：画质一般。",
             "dimensions": {
               "deep_learning": 56.6
@@ -2145,7 +2145,7 @@
             "method": "dl",
             "overall": 62.4,
             "grade": "C 一般",
-            "elapsed_ms": 264.1,
+            "elapsed_ms": 246.1,
             "summary": "深度学习画质：画质一般。",
             "dimensions": {
               "deep_learning": 62.4
@@ -2161,7 +2161,7 @@
             "method": "dl",
             "overall": 69.1,
             "grade": "C 一般",
-            "elapsed_ms": 261.3,
+            "elapsed_ms": 235.8,
             "summary": "深度学习画质：画质一般。",
             "dimensions": {
               "deep_learning": 69.1
@@ -2174,7 +2174,7 @@
         ],
         "count": 3,
         "avg_overall": 62.7,
-        "avg_elapsed_ms": 262.9
+        "avg_elapsed_ms": 238.9
       },
       "large": {
         "entries": [
@@ -2184,7 +2184,7 @@
             "method": "dl",
             "overall": 52.5,
             "grade": "D 较差",
-            "elapsed_ms": 301.5,
+            "elapsed_ms": 275.9,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 52.5
@@ -2197,7 +2197,7 @@
         ],
         "count": 1,
         "avg_overall": 52.5,
-        "avg_elapsed_ms": 301.5
+        "avg_elapsed_ms": 275.9
       },
       "counterexample": {
         "entries": [
@@ -2207,7 +2207,7 @@
             "method": "dl",
             "overall": 61.4,
             "grade": "C 一般",
-            "elapsed_ms": 259.9,
+            "elapsed_ms": 236.8,
             "summary": "深度学习画质：画质一般。",
             "dimensions": {
               "deep_learning": 61.4
@@ -2223,7 +2223,7 @@
             "method": "dl",
             "overall": 68.1,
             "grade": "C 一般",
-            "elapsed_ms": 239.1,
+            "elapsed_ms": 236.2,
             "summary": "深度学习画质：画质一般。",
             "dimensions": {
               "deep_learning": 68.1
@@ -2239,7 +2239,7 @@
             "method": "dl",
             "overall": 52.0,
             "grade": "D 较差",
-            "elapsed_ms": 249.5,
+            "elapsed_ms": 219.2,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 52.0
@@ -2252,7 +2252,7 @@
         ],
         "count": 3,
         "avg_overall": 60.5,
-        "avg_elapsed_ms": 249.5
+        "avg_elapsed_ms": 230.7
       },
       "formats": {
         "entries": [
@@ -2262,7 +2262,7 @@
             "method": "dl",
             "overall": 51.8,
             "grade": "D 较差",
-            "elapsed_ms": 283.1,
+            "elapsed_ms": 240.6,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 51.8
@@ -2278,7 +2278,7 @@
             "method": "dl",
             "overall": 51.8,
             "grade": "D 较差",
-            "elapsed_ms": 289.8,
+            "elapsed_ms": 275.2,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 51.8
@@ -2294,7 +2294,7 @@
             "method": "dl",
             "overall": 51.1,
             "grade": "D 较差",
-            "elapsed_ms": 245.4,
+            "elapsed_ms": 225.5,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 51.1
@@ -2310,7 +2310,7 @@
             "method": "dl",
             "overall": 52.5,
             "grade": "D 较差",
-            "elapsed_ms": 302.7,
+            "elapsed_ms": 296.5,
             "summary": "深度学习画质：画质偏差。",
             "dimensions": {
               "deep_learning": 52.5
@@ -2323,7 +2323,7 @@
         ],
         "count": 4,
         "avg_overall": 51.8,
-        "avg_elapsed_ms": 280.2
+        "avg_elapsed_ms": 259.4
       }
     },
     "hybrid": {
@@ -2335,7 +2335,7 @@
             "method": "hybrid",
             "overall": 63.7,
             "grade": "C 一般",
-            "elapsed_ms": 370.7,
+            "elapsed_ms": 355.6,
             "summary": "清晰度：非常清晰 (已校正噪点)；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 78.8,
@@ -2357,7 +2357,7 @@
             "method": "hybrid",
             "overall": 68.2,
             "grade": "C 一般",
-            "elapsed_ms": 319.2,
+            "elapsed_ms": 316.4,
             "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 75.5,
@@ -2379,7 +2379,7 @@
             "method": "hybrid",
             "overall": 70.9,
             "grade": "C 一般",
-            "elapsed_ms": 320.0,
+            "elapsed_ms": 300.8,
             "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好；深度学习画质：画质一般。",
             "dimensions": {
               "sharpness": 78.7,
@@ -2398,7 +2398,7 @@
         ],
         "count": 3,
         "avg_overall": 67.6,
-        "avg_elapsed_ms": 336.6
+        "avg_elapsed_ms": 324.3
       },
       "blur": {
         "entries": [
@@ -2408,7 +2408,7 @@
             "method": "hybrid",
             "overall": 50.4,
             "grade": "D 较差",
-            "elapsed_ms": 318.8,
+            "elapsed_ms": 279.2,
             "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质较差。",
             "dimensions": {
               "sharpness": 27.3,
@@ -2430,7 +2430,7 @@
             "method": "hybrid",
             "overall": 42.8,
             "grade": "D 较差",
-            "elapsed_ms": 314.2,
+            "elapsed_ms": 277.7,
             "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质较差。",
             "dimensions": {
               "sharpness": 5.3,
@@ -2452,7 +2452,7 @@
             "method": "hybrid",
             "overall": 44.0,
             "grade": "D 较差",
-            "elapsed_ms": 300.3,
+            "elapsed_ms": 256.5,
             "summary": "清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 3.0,
@@ -2471,7 +2471,7 @@
         ],
         "count": 3,
         "avg_overall": 45.7,
-        "avg_elapsed_ms": 311.1
+        "avg_elapsed_ms": 271.1
       },
       "overexpose": {
         "entries": [
@@ -2481,7 +2481,7 @@
             "method": "hybrid",
             "overall": 68.9,
             "grade": "C 一般",
-            "elapsed_ms": 324.0,
+            "elapsed_ms": 289.6,
             "summary": "清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 78.9,
@@ -2503,7 +2503,7 @@
             "method": "hybrid",
             "overall": 65.0,
             "grade": "C 一般",
-            "elapsed_ms": 312.5,
+            "elapsed_ms": 297.0,
             "summary": "清晰度：基本清晰；曝光：整体偏亮；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 77.8,
@@ -2525,7 +2525,7 @@
             "method": "hybrid",
             "overall": 56.0,
             "grade": "D 较差",
-            "elapsed_ms": 311.1,
+            "elapsed_ms": 278.3,
             "summary": "清晰度：基本清晰；曝光：过曝；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 78.6,
@@ -2544,7 +2544,7 @@
         ],
         "count": 3,
         "avg_overall": 63.3,
-        "avg_elapsed_ms": 315.9
+        "avg_elapsed_ms": 288.3
       },
       "underexpose": {
         "entries": [
@@ -2554,7 +2554,7 @@
             "method": "hybrid",
             "overall": 15.9,
             "grade": "E 很差",
-            "elapsed_ms": 311.7,
+            "elapsed_ms": 276.4,
             "summary": "清晰度：严重模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质较差。",
             "dimensions": {
               "sharpness": 13.0,
@@ -2576,7 +2576,7 @@
             "method": "hybrid",
             "overall": 40.7,
             "grade": "D 较差",
-            "elapsed_ms": 303.5,
+            "elapsed_ms": 291.9,
             "summary": "清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质较差。",
             "dimensions": {
               "sharpness": 31.5,
@@ -2598,7 +2598,7 @@
             "method": "hybrid",
             "overall": 53.7,
             "grade": "D 较差",
-            "elapsed_ms": 299.2,
+            "elapsed_ms": 289.8,
             "summary": "清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 46.4,
@@ -2617,7 +2617,7 @@
         ],
         "count": 3,
         "avg_overall": 36.8,
-        "avg_elapsed_ms": 304.8
+        "avg_elapsed_ms": 286.0
       },
       "noise": {
         "entries": [
@@ -2627,7 +2627,7 @@
             "method": "hybrid",
             "overall": 70.7,
             "grade": "C 一般",
-            "elapsed_ms": 322.6,
+            "elapsed_ms": 285.1,
             "summary": "清晰度：非常清晰；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好；深度学习画质：画质一般。",
             "dimensions": {
               "sharpness": 89.7,
@@ -2649,7 +2649,7 @@
             "method": "hybrid",
             "overall": 63.4,
             "grade": "C 一般",
-            "elapsed_ms": 299.4,
+            "elapsed_ms": 277.4,
             "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。",
             "dimensions": {
               "sharpness": 56.4,
@@ -2671,7 +2671,7 @@
             "method": "hybrid",
             "overall": 53.6,
             "grade": "D 较差",
-            "elapsed_ms": 326.4,
+            "elapsed_ms": 291.6,
             "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。",
             "dimensions": {
               "sharpness": 26.7,
@@ -2690,7 +2690,7 @@
         ],
         "count": 3,
         "avg_overall": 62.6,
-        "avg_elapsed_ms": 316.1
+        "avg_elapsed_ms": 284.7
       },
       "large": {
         "entries": [
@@ -2700,7 +2700,7 @@
             "method": "hybrid",
             "overall": 67.1,
             "grade": "C 一般",
-            "elapsed_ms": 362.6,
+            "elapsed_ms": 345.5,
             "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 65.1,
@@ -2719,7 +2719,7 @@
         ],
         "count": 1,
         "avg_overall": 67.1,
-        "avg_elapsed_ms": 362.6
+        "avg_elapsed_ms": 345.5
       },
       "counterexample": {
         "entries": [
@@ -2729,7 +2729,7 @@
             "method": "hybrid",
             "overall": 54.9,
             "grade": "D 较差",
-            "elapsed_ms": 322.2,
+            "elapsed_ms": 288.5,
             "summary": "清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。",
             "dimensions": {
               "sharpness": 33.2,
@@ -2751,7 +2751,7 @@
             "method": "hybrid",
             "overall": 78.4,
             "grade": "B 良好",
-            "elapsed_ms": 313.7,
+            "elapsed_ms": 299.8,
             "summary": "清晰度：清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好；深度学习画质：画质一般。",
             "dimensions": {
               "sharpness": 94.5,
@@ -2773,7 +2773,7 @@
             "method": "hybrid",
             "overall": 48.8,
             "grade": "D 较差",
-            "elapsed_ms": 317.9,
+            "elapsed_ms": 282.5,
             "summary": "清晰度：严重模糊；曝光：整体偏亮；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 25.4,
@@ -2792,7 +2792,7 @@
         ],
         "count": 3,
         "avg_overall": 60.7,
-        "avg_elapsed_ms": 317.9
+        "avg_elapsed_ms": 290.3
       },
       "formats": {
         "entries": [
@@ -2802,7 +2802,7 @@
             "method": "hybrid",
             "overall": 68.1,
             "grade": "C 一般",
-            "elapsed_ms": 344.4,
+            "elapsed_ms": 311.6,
             "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 74.2,
@@ -2824,7 +2824,7 @@
             "method": "hybrid",
             "overall": 68.1,
             "grade": "C 一般",
-            "elapsed_ms": 341.6,
+            "elapsed_ms": 325.0,
             "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 74.2,
@@ -2846,7 +2846,7 @@
             "method": "hybrid",
             "overall": 67.7,
             "grade": "C 一般",
-            "elapsed_ms": 306.5,
+            "elapsed_ms": 285.2,
             "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 73.5,
@@ -2868,7 +2868,7 @@
             "method": "hybrid",
             "overall": 68.0,
             "grade": "C 一般",
-            "elapsed_ms": 378.3,
+            "elapsed_ms": 333.3,
             "summary": "清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。",
             "dimensions": {
               "sharpness": 71.0,
@@ -2887,7 +2887,7 @@
         ],
         "count": 4,
         "avg_overall": 68.0,
-        "avg_elapsed_ms": 342.7
+        "avg_elapsed_ms": 313.8
       }
     }
   },

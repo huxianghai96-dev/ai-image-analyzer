@@ -10,40 +10,40 @@
 
 | 类别 | 样本数 | 平均综合分 | 平均耗时(ms) | 人工预期 |
 |------|--------|-----------|-------------|----------|
-| clear | 3 | 83.1 | 82.2 | 高 |
-| blur | 3 | 53.6 | 66.4 | 低 |
-| overexpose | 3 | 75.7 | 69.9 | 低 |
-| underexpose | 3 | 46.5 | 65.2 | 低 |
-| noise | 3 | 62.5 | 79.2 | 低 |
-| large | 1 | 81.7 | 122.1 | 中 |
-| counterexample | 3 | 60.9 | 71.7 | 失准 |
-| formats | 4 | 84.2 | 107.2 | 一致 |
+| clear | 3 | 83.1 | 73.3 | 高 |
+| blur | 3 | 53.6 | 57.9 | 低 |
+| overexpose | 3 | 75.7 | 59.9 | 低 |
+| underexpose | 3 | 46.5 | 58.2 | 低 |
+| noise | 3 | 62.5 | 68.7 | 低 |
+| large | 1 | 81.7 | 106.0 | 中 |
+| counterexample | 3 | 60.9 | 63.8 | 失准 |
+| formats | 4 | 84.2 | 93.6 | 一致 |
 
 ## 深度学习 · 分类汇总
 
 | 类别 | 样本数 | 平均综合分 | 平均耗时(ms) | 人工预期 |
 |------|--------|-----------|-------------|----------|
-| clear | 3 | 52.1 | 311.7 | 高 |
-| blur | 3 | 37.9 | 254.3 | 低 |
-| overexpose | 3 | 50.8 | 252.1 | 低 |
-| underexpose | 3 | 27.1 | 252.2 | 低 |
-| noise | 3 | 62.7 | 262.9 | 低 |
-| large | 1 | 52.5 | 301.5 | 中 |
-| counterexample | 3 | 60.5 | 249.5 | 失准 |
-| formats | 4 | 51.8 | 280.2 | 一致 |
+| clear | 3 | 52.1 | 304.5 | 高 |
+| blur | 3 | 37.9 | 224.7 | 低 |
+| overexpose | 3 | 50.8 | 236.9 | 低 |
+| underexpose | 3 | 27.1 | 232.5 | 低 |
+| noise | 3 | 62.7 | 238.9 | 低 |
+| large | 1 | 52.5 | 275.9 | 中 |
+| counterexample | 3 | 60.5 | 230.7 | 失准 |
+| formats | 4 | 51.8 | 259.4 | 一致 |
 
 ## 混合模式 · 分类汇总
 
 | 类别 | 样本数 | 平均综合分 | 平均耗时(ms) | 人工预期 |
 |------|--------|-----------|-------------|----------|
-| clear | 3 | 67.6 | 336.6 | 高 |
-| blur | 3 | 45.7 | 311.1 | 低 |
-| overexpose | 3 | 63.3 | 315.9 | 低 |
-| underexpose | 3 | 36.8 | 304.8 | 低 |
-| noise | 3 | 62.6 | 316.1 | 低 |
-| large | 1 | 67.1 | 362.6 | 中 |
-| counterexample | 3 | 60.7 | 317.9 | 失准 |
-| formats | 4 | 68.0 | 342.7 | 一致 |
+| clear | 3 | 67.6 | 324.3 | 高 |
+| blur | 3 | 45.7 | 271.1 | 低 |
+| overexpose | 3 | 63.3 | 288.3 | 低 |
+| underexpose | 3 | 36.8 | 286.0 | 低 |
+| noise | 3 | 62.6 | 284.7 | 低 |
+| large | 1 | 67.1 | 345.5 | 中 |
+| counterexample | 3 | 60.7 | 290.3 | 失准 |
+| formats | 4 | 68.0 | 313.8 | 一致 |
 
 ## 传统 vs 深度学习 · 综合分对比
 
@@ -65,139 +65,139 @@
 
 #### test_samples\clear\clear_texture.jpg (clear)
 - 综合分: **79.0** (B 良好)
-- 耗时: 82.6 ms
+- 耗时: 73.0 ms
 - 维度: {'sharpness': 78.8, 'exposure': 96.0, 'noise': 68.7, 'contrast': 71.2}
 - 评价: 清晰度：非常清晰 (已校正噪点)；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好。
 
 #### test_samples\clear\clear_scene.jpg (clear)
 - 综合分: **84.8** (B 良好)
-- 耗时: 80.5 ms
+- 耗时: 74.2 ms
 - 维度: {'sharpness': 75.5, 'exposure': 95.9, 'noise': 95.3, 'contrast': 70.7}
 - 评价: 清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。
 
 #### test_samples\clear\clear_sharp.jpg (clear)
 - 综合分: **85.6** (B 良好)
-- 耗时: 83.6 ms
+- 耗时: 72.8 ms
 - 维度: {'sharpness': 78.7, 'exposure': 95.9, 'noise': 93.8, 'contrast': 70.8}
 - 评价: 清晰度：基本清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好。
 
 #### test_samples\blur\blur_k5.jpg (blur)
 - 综合分: **64.2** (C 一般)
-- 耗时: 70.5 ms
+- 耗时: 62.8 ms
 - 维度: {'sharpness': 27.3, 'exposure': 95.9, 'noise': 98.0, 'contrast': 70.6}
 - 评价: 清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。
 
 #### test_samples\blur\blur_k15.jpg (blur)
 - 综合分: **49.0** (D 较差)
-- 耗时: 65.1 ms
+- 耗时: 58.2 ms
 - 维度: {'sharpness': 5.3, 'exposure': 95.9, 'noise': 98.8, 'contrast': 70.5}
 - 评价: 清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。
 
 #### test_samples\blur\blur_k31.jpg (blur)
 - 综合分: **47.5** (D 较差)
-- 耗时: 63.7 ms
+- 耗时: 52.6 ms
 - 维度: {'sharpness': 3.0, 'exposure': 95.8, 'noise': 99.4, 'contrast': 70.4}
 - 评价: 清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。
 
 #### test_samples\overexpose\over_1_g1.4.jpg (overexpose)
 - 综合分: **84.1** (B 良好)
-- 耗时: 67.3 ms
+- 耗时: 59.6 ms
 - 维度: {'sharpness': 78.9, 'exposure': 82.7, 'noise': 95.8, 'contrast': 79.1}
 - 评价: 清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。
 
 #### test_samples\overexpose\over_2_g1.8.jpg (overexpose)
 - 综合分: **78.6** (B 良好)
-- 耗时: 68.0 ms
+- 耗时: 58.7 ms
 - 维度: {'sharpness': 77.8, 'exposure': 67.2, 'noise': 96.5, 'contrast': 75.3}
 - 评价: 清晰度：基本清晰；曝光：整体偏亮；噪点：噪点极低；对比度：对比度良好。
 
 #### test_samples\overexpose\over_3_g2.2.jpg (overexpose)
 - 综合分: **64.4** (C 一般)
-- 耗时: 74.4 ms
+- 耗时: 61.3 ms
 - 维度: {'sharpness': 78.6, 'exposure': 43.7, 'noise': 97.4, 'contrast': 63.1}
 - 评价: 清晰度：基本清晰；曝光：过曝；噪点：噪点极低；对比度：对比度一般。
 
 #### test_samples\underexpose\under_1_g0.25.jpg (underexpose)
 - 综合分: **26.9** (E 很差)
-- 耗时: 66.0 ms
+- 耗时: 55.2 ms
 - 维度: {'sharpness': 13.0, 'exposure': 53.8, 'noise': 95.2, 'contrast': 20.6}
 - 评价: 清晰度：严重模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低。
 
 #### test_samples\underexpose\under_2_g0.4.jpg (underexpose)
 - 综合分: **48.3** (D 较差)
-- 耗时: 68.7 ms
+- 耗时: 59.2 ms
 - 维度: {'sharpness': 31.5, 'exposure': 62.2, 'noise': 95.7, 'contrast': 32.9}
 - 评价: 清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低。
 
 #### test_samples\underexpose\under_3_g0.55.jpg (underexpose)
 - 综合分: **64.3** (C 一般)
-- 耗时: 61.0 ms
+- 耗时: 60.2 ms
 - 维度: {'sharpness': 46.4, 'exposure': 70.5, 'noise': 95.8, 'contrast': 44.0}
 - 评价: 清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度一般。
 
 #### test_samples\noise\noise_s15.jpg (noise)
 - 综合分: **84.8** (B 良好)
-- 耗时: 77.6 ms
+- 耗时: 69.7 ms
 - 维度: {'sharpness': 89.7, 'exposure': 95.6, 'noise': 75.1, 'contrast': 71.2}
 - 评价: 清晰度：非常清晰；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好。
 
 #### test_samples\noise\noise_s30.jpg (noise)
 - 综合分: **64.4** (C 一般)
-- 耗时: 77.4 ms
+- 耗时: 64.4 ms
 - 维度: {'sharpness': 56.4, 'exposure': 95.6, 'noise': 57.3, 'contrast': 72.5}
 - 评价: 清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。
 
 #### test_samples\noise\noise_s50.jpg (noise)
 - 综合分: **38.2** (E 很差)
-- 耗时: 82.7 ms
+- 耗时: 72.1 ms
 - 维度: {'sharpness': 26.7, 'exposure': 95.7, 'noise': 38.2, 'contrast': 74.4}
 - 评价: 清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。
 
 #### test_samples\large\large_12mp.jpg (large)
 - 综合分: **81.7** (B 良好)
-- 耗时: 122.1 ms
+- 耗时: 106.0 ms
 - 维度: {'sharpness': 65.1, 'exposure': 95.6, 'noise': 97.6, 'contrast': 70.8}
 - 评价: 清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。
 
 #### test_samples\counterexample\noise_masquerade_sharp.jpg (counterexample)
 - 综合分: **48.3** (D 较差)
-- 耗时: 80.5 ms
+- 耗时: 70.8 ms
 - 维度: {'sharpness': 33.2, 'exposure': 96.2, 'noise': 47.4, 'contrast': 74.0}
 - 评价: 清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好。
 
 #### test_samples\counterexample\over_sharpened_halo.jpg (counterexample)
 - 综合分: **88.7** (B 良好)
-- 耗时: 70.7 ms
+- 耗时: 62.4 ms
 - 维度: {'sharpness': 94.5, 'exposure': 95.9, 'noise': 84.0, 'contrast': 71.3}
 - 评价: 清晰度：清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好。
 
 #### test_samples\counterexample\foggy_low_contrast.jpg (counterexample)
 - 综合分: **45.6** (D 较差)
-- 耗时: 63.9 ms
+- 耗时: 58.3 ms
 - 维度: {'sharpness': 25.4, 'exposure': 65.7, 'noise': 99.1, 'contrast': 28.8}
 - 评价: 清晰度：严重模糊；曝光：整体偏亮；噪点：噪点极低；对比度：对比度偏低。
 
 #### test_samples\formats\sample.png (formats)
 - 综合分: **84.5** (B 良好)
-- 耗时: 100.8 ms
+- 耗时: 86.6 ms
 - 维度: {'sharpness': 74.2, 'exposure': 95.9, 'noise': 95.6, 'contrast': 70.7}
 - 评价: 清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。
 
 #### test_samples\formats\sample.webp (formats)
 - 综合分: **84.5** (B 良好)
-- 耗时: 109.3 ms
+- 耗时: 94.8 ms
 - 维度: {'sharpness': 74.2, 'exposure': 95.9, 'noise': 95.6, 'contrast': 70.7}
 - 评价: 清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。
 
 #### test_samples\formats\sample.jpg (formats)
 - 综合分: **84.3** (B 良好)
-- 耗时: 67.5 ms
+- 耗时: 67.2 ms
 - 维度: {'sharpness': 73.5, 'exposure': 95.9, 'noise': 95.8, 'contrast': 70.7}
 - 评价: 清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。
 
 #### test_samples\formats\sample.heic (formats)
 - 综合分: **83.5** (B 良好)
-- 耗时: 151.1 ms
+- 耗时: 125.7 ms
 - 维度: {'sharpness': 71.0, 'exposure': 95.9, 'noise': 96.1, 'contrast': 70.7}
 - 评价: 清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好。
 
@@ -205,139 +205,139 @@
 
 #### test_samples\clear\clear_texture.jpg (clear)
 - 综合分: **48.4** (D 较差)
-- 耗时: 385.6 ms
+- 耗时: 374.9 ms
 - 维度: {'deep_learning': 48.4}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\clear\clear_scene.jpg (clear)
 - 综合分: **51.5** (D 较差)
-- 耗时: 284.0 ms
+- 耗时: 282.1 ms
 - 维度: {'deep_learning': 51.5}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\clear\clear_sharp.jpg (clear)
 - 综合分: **56.3** (D 较差)
-- 耗时: 265.5 ms
+- 耗时: 256.6 ms
 - 维度: {'deep_learning': 56.3}
 - 评价: 深度学习画质：画质一般。
 
 #### test_samples\blur\blur_k5.jpg (blur)
 - 综合分: **36.6** (E 很差)
-- 耗时: 258.6 ms
+- 耗时: 222.6 ms
 - 维度: {'deep_learning': 36.6}
 - 评价: 深度学习画质：画质较差。
 
 #### test_samples\blur\blur_k15.jpg (blur)
 - 综合分: **36.6** (E 很差)
-- 耗时: 252.4 ms
+- 耗时: 225.0 ms
 - 维度: {'deep_learning': 36.6}
 - 评价: 深度学习画质：画质较差。
 
 #### test_samples\blur\blur_k31.jpg (blur)
 - 综合分: **40.6** (D 较差)
-- 耗时: 251.8 ms
+- 耗时: 226.4 ms
 - 维度: {'deep_learning': 40.6}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\overexpose\over_1_g1.4.jpg (overexpose)
 - 综合分: **53.6** (D 较差)
-- 耗时: 253.0 ms
+- 耗时: 242.8 ms
 - 维度: {'deep_learning': 53.6}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\overexpose\over_2_g1.8.jpg (overexpose)
 - 综合分: **51.3** (D 较差)
-- 耗时: 246.2 ms
+- 耗时: 225.2 ms
 - 维度: {'deep_learning': 51.3}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\overexpose\over_3_g2.2.jpg (overexpose)
 - 综合分: **47.6** (D 较差)
-- 耗时: 257.2 ms
+- 耗时: 242.7 ms
 - 维度: {'deep_learning': 47.6}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\underexpose\under_1_g0.25.jpg (underexpose)
 - 综合分: **4.9** (E 很差)
-- 耗时: 254.1 ms
+- 耗时: 229.8 ms
 - 维度: {'deep_learning': 4.9}
 - 评价: 深度学习画质：画质较差。
 
 #### test_samples\underexpose\under_2_g0.4.jpg (underexpose)
 - 综合分: **33.1** (E 很差)
-- 耗时: 258.4 ms
+- 耗时: 230.9 ms
 - 维度: {'deep_learning': 33.1}
 - 评价: 深度学习画质：画质较差。
 
 #### test_samples\underexpose\under_3_g0.55.jpg (underexpose)
 - 综合分: **43.2** (D 较差)
-- 耗时: 244.0 ms
+- 耗时: 236.7 ms
 - 维度: {'deep_learning': 43.2}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\noise\noise_s15.jpg (noise)
 - 综合分: **56.6** (D 较差)
-- 耗时: 263.3 ms
+- 耗时: 234.7 ms
 - 维度: {'deep_learning': 56.6}
 - 评价: 深度学习画质：画质一般。
 
 #### test_samples\noise\noise_s30.jpg (noise)
 - 综合分: **62.4** (C 一般)
-- 耗时: 264.1 ms
+- 耗时: 246.1 ms
 - 维度: {'deep_learning': 62.4}
 - 评价: 深度学习画质：画质一般。
 
 #### test_samples\noise\noise_s50.jpg (noise)
 - 综合分: **69.1** (C 一般)
-- 耗时: 261.3 ms
+- 耗时: 235.8 ms
 - 维度: {'deep_learning': 69.1}
 - 评价: 深度学习画质：画质一般。
 
 #### test_samples\large\large_12mp.jpg (large)
 - 综合分: **52.5** (D 较差)
-- 耗时: 301.5 ms
+- 耗时: 275.9 ms
 - 维度: {'deep_learning': 52.5}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\counterexample\noise_masquerade_sharp.jpg (counterexample)
 - 综合分: **61.4** (C 一般)
-- 耗时: 259.9 ms
+- 耗时: 236.8 ms
 - 维度: {'deep_learning': 61.4}
 - 评价: 深度学习画质：画质一般。
 
 #### test_samples\counterexample\over_sharpened_halo.jpg (counterexample)
 - 综合分: **68.1** (C 一般)
-- 耗时: 239.1 ms
+- 耗时: 236.2 ms
 - 维度: {'deep_learning': 68.1}
 - 评价: 深度学习画质：画质一般。
 
 #### test_samples\counterexample\foggy_low_contrast.jpg (counterexample)
 - 综合分: **52.0** (D 较差)
-- 耗时: 249.5 ms
+- 耗时: 219.2 ms
 - 维度: {'deep_learning': 52.0}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\formats\sample.png (formats)
 - 综合分: **51.8** (D 较差)
-- 耗时: 283.1 ms
+- 耗时: 240.6 ms
 - 维度: {'deep_learning': 51.8}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\formats\sample.webp (formats)
 - 综合分: **51.8** (D 较差)
-- 耗时: 289.8 ms
+- 耗时: 275.2 ms
 - 维度: {'deep_learning': 51.8}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\formats\sample.jpg (formats)
 - 综合分: **51.1** (D 较差)
-- 耗时: 245.4 ms
+- 耗时: 225.5 ms
 - 维度: {'deep_learning': 51.1}
 - 评价: 深度学习画质：画质偏差。
 
 #### test_samples\formats\sample.heic (formats)
 - 综合分: **52.5** (D 较差)
-- 耗时: 302.7 ms
+- 耗时: 296.5 ms
 - 维度: {'deep_learning': 52.5}
 - 评价: 深度学习画质：画质偏差。
 
@@ -345,161 +345,161 @@
 
 #### test_samples\clear\clear_texture.jpg (clear)
 - 综合分: **63.7** (C 一般)
-- 耗时: 370.7 ms
+- 耗时: 355.6 ms
 - 维度: {'sharpness': 78.8, 'exposure': 96.0, 'noise': 68.7, 'contrast': 71.2, 'deep_learning': 48.4}
 - 融合: 传统 78.98 + DL 48.4
 - 评价: 清晰度：非常清晰 (已校正噪点)；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好；深度学习画质：画质偏差。
 
 #### test_samples\clear\clear_scene.jpg (clear)
 - 综合分: **68.2** (C 一般)
-- 耗时: 319.2 ms
+- 耗时: 316.4 ms
 - 维度: {'sharpness': 75.5, 'exposure': 95.9, 'noise': 95.3, 'contrast': 70.7, 'deep_learning': 51.5}
 - 融合: 传统 84.83 + DL 51.5
 - 评价: 清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。
 
 #### test_samples\clear\clear_sharp.jpg (clear)
 - 综合分: **70.9** (C 一般)
-- 耗时: 320.0 ms
+- 耗时: 300.8 ms
 - 维度: {'sharpness': 78.7, 'exposure': 95.9, 'noise': 93.8, 'contrast': 70.8, 'deep_learning': 56.3}
 - 融合: 传统 85.59 + DL 56.3
 - 评价: 清晰度：基本清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好；深度学习画质：画质一般。
 
 #### test_samples\blur\blur_k5.jpg (blur)
 - 综合分: **50.4** (D 较差)
-- 耗时: 318.8 ms
+- 耗时: 279.2 ms
 - 维度: {'sharpness': 27.3, 'exposure': 95.9, 'noise': 98.0, 'contrast': 70.6, 'deep_learning': 36.6}
 - 融合: 传统 64.17500000000001 + DL 36.6
 - 评价: 清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质较差。
 
 #### test_samples\blur\blur_k15.jpg (blur)
 - 综合分: **42.8** (D 较差)
-- 耗时: 314.2 ms
+- 耗时: 277.7 ms
 - 维度: {'sharpness': 5.3, 'exposure': 95.9, 'noise': 98.8, 'contrast': 70.5, 'deep_learning': 36.6}
 - 融合: 传统 48.959999999999994 + DL 36.6
 - 评价: 清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质较差。
 
 #### test_samples\blur\blur_k31.jpg (blur)
 - 综合分: **44.0** (D 较差)
-- 耗时: 300.3 ms
+- 耗时: 256.5 ms
 - 维度: {'sharpness': 3.0, 'exposure': 95.8, 'noise': 99.4, 'contrast': 70.4, 'deep_learning': 40.6}
 - 融合: 传统 47.46000000000001 + DL 40.6
 - 评价: 清晰度：严重模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。
 
 #### test_samples\overexpose\over_1_g1.4.jpg (overexpose)
 - 综合分: **68.9** (C 一般)
-- 耗时: 324.0 ms
+- 耗时: 289.6 ms
 - 维度: {'sharpness': 78.9, 'exposure': 82.7, 'noise': 95.8, 'contrast': 79.1, 'deep_learning': 53.6}
 - 融合: 传统 84.105 + DL 53.6
 - 评价: 清晰度：基本清晰；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。
 
 #### test_samples\overexpose\over_2_g1.8.jpg (overexpose)
 - 综合分: **65.0** (C 一般)
-- 耗时: 312.5 ms
+- 耗时: 297.0 ms
 - 维度: {'sharpness': 77.8, 'exposure': 67.2, 'noise': 96.5, 'contrast': 75.3, 'deep_learning': 51.3}
 - 融合: 传统 78.61 + DL 51.3
 - 评价: 清晰度：基本清晰；曝光：整体偏亮；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。
 
 #### test_samples\overexpose\over_3_g2.2.jpg (overexpose)
 - 综合分: **56.0** (D 较差)
-- 耗时: 311.1 ms
+- 耗时: 278.3 ms
 - 维度: {'sharpness': 78.6, 'exposure': 43.7, 'noise': 97.4, 'contrast': 63.1, 'deep_learning': 47.6}
 - 融合: 传统 64.36 + DL 47.6
 - 评价: 清晰度：基本清晰；曝光：过曝；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质偏差。
 
 #### test_samples\underexpose\under_1_g0.25.jpg (underexpose)
 - 综合分: **15.9** (E 很差)
-- 耗时: 311.7 ms
+- 耗时: 276.4 ms
 - 维度: {'sharpness': 13.0, 'exposure': 53.8, 'noise': 95.2, 'contrast': 20.6, 'deep_learning': 4.9}
 - 融合: 传统 26.92 + DL 4.9
 - 评价: 清晰度：严重模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质较差。
 
 #### test_samples\underexpose\under_2_g0.4.jpg (underexpose)
 - 综合分: **40.7** (D 较差)
-- 耗时: 303.5 ms
+- 耗时: 291.9 ms
 - 维度: {'sharpness': 31.5, 'exposure': 62.2, 'noise': 95.7, 'contrast': 32.9, 'deep_learning': 33.1}
 - 融合: 传统 48.30500000000001 + DL 33.1
 - 评价: 清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质较差。
 
 #### test_samples\underexpose\under_3_g0.55.jpg (underexpose)
 - 综合分: **53.7** (D 较差)
-- 耗时: 299.2 ms
+- 耗时: 289.8 ms
 - 维度: {'sharpness': 46.4, 'exposure': 70.5, 'noise': 95.8, 'contrast': 44.0, 'deep_learning': 43.2}
 - 融合: 传统 64.26499999999999 + DL 43.2
 - 评价: 清晰度：明显模糊；曝光：整体偏暗；噪点：噪点极低；对比度：对比度一般；深度学习画质：画质偏差。
 
 #### test_samples\noise\noise_s15.jpg (noise)
 - 综合分: **70.7** (C 一般)
-- 耗时: 322.6 ms
+- 耗时: 285.1 ms
 - 维度: {'sharpness': 89.7, 'exposure': 95.6, 'noise': 75.1, 'contrast': 71.2, 'deep_learning': 56.6}
 - 融合: 传统 84.75 + DL 56.6
 - 评价: 清晰度：非常清晰；曝光：曝光正常；噪点：噪点中等；对比度：对比度良好；深度学习画质：画质一般。
 
 #### test_samples\noise\noise_s30.jpg (noise)
 - 综合分: **63.4** (C 一般)
-- 耗时: 299.4 ms
+- 耗时: 277.4 ms
 - 维度: {'sharpness': 56.4, 'exposure': 95.6, 'noise': 57.3, 'contrast': 72.5, 'deep_learning': 62.4}
 - 融合: 传统 64.39500000000001 + DL 62.4
 - 评价: 清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。
 
 #### test_samples\noise\noise_s50.jpg (noise)
 - 综合分: **53.6** (D 较差)
-- 耗时: 326.4 ms
+- 耗时: 291.6 ms
 - 维度: {'sharpness': 26.7, 'exposure': 95.7, 'noise': 38.2, 'contrast': 74.4, 'deep_learning': 69.1}
 - 融合: 传统 38.19500000000001 + DL 69.1
 - 评价: 清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。
 
 #### test_samples\large\large_12mp.jpg (large)
 - 综合分: **67.1** (C 一般)
-- 耗时: 362.6 ms
+- 耗时: 345.5 ms
 - 维度: {'sharpness': 65.1, 'exposure': 95.6, 'noise': 97.6, 'contrast': 70.8, 'deep_learning': 52.5}
 - 融合: 传统 81.705 + DL 52.5
 - 评价: 清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。
 
 #### test_samples\counterexample\noise_masquerade_sharp.jpg (counterexample)
 - 综合分: **54.9** (D 较差)
-- 耗时: 322.2 ms
+- 耗时: 288.5 ms
 - 维度: {'sharpness': 33.2, 'exposure': 96.2, 'noise': 47.4, 'contrast': 74.0, 'deep_learning': 61.4}
 - 融合: 传统 48.330000000000005 + DL 61.4
 - 评价: 清晰度：假性清晰(严重噪点)；曝光：曝光正常；噪点：噪点明显；对比度：对比度良好；深度学习画质：画质一般。
 
 #### test_samples\counterexample\over_sharpened_halo.jpg (counterexample)
 - 综合分: **78.4** (B 良好)
-- 耗时: 313.7 ms
+- 耗时: 299.8 ms
 - 维度: {'sharpness': 94.5, 'exposure': 95.9, 'noise': 84.0, 'contrast': 71.3, 'deep_learning': 68.1}
 - 融合: 传统 88.74499999999999 + DL 68.1
 - 评价: 清晰度：清晰；曝光：曝光正常；噪点：噪点轻微；对比度：对比度良好；深度学习画质：画质一般。
 
 #### test_samples\counterexample\foggy_low_contrast.jpg (counterexample)
 - 综合分: **48.8** (D 较差)
-- 耗时: 317.9 ms
+- 耗时: 282.5 ms
 - 维度: {'sharpness': 25.4, 'exposure': 65.7, 'noise': 99.1, 'contrast': 28.8, 'deep_learning': 52.0}
 - 融合: 传统 45.58 + DL 52.0
 - 评价: 清晰度：严重模糊；曝光：整体偏亮；噪点：噪点极低；对比度：对比度偏低；深度学习画质：画质偏差。
 
 #### test_samples\formats\sample.png (formats)
 - 综合分: **68.1** (C 一般)
-- 耗时: 344.4 ms
+- 耗时: 311.6 ms
 - 维度: {'sharpness': 74.2, 'exposure': 95.9, 'noise': 95.6, 'contrast': 70.7, 'deep_learning': 51.8}
 - 融合: 传统 84.45 + DL 51.8
 - 评价: 清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。
 
 #### test_samples\formats\sample.webp (formats)
 - 综合分: **68.1** (C 一般)
-- 耗时: 341.6 ms
+- 耗时: 325.0 ms
 - 维度: {'sharpness': 74.2, 'exposure': 95.9, 'noise': 95.6, 'contrast': 70.7, 'deep_learning': 51.8}
 - 融合: 传统 84.45 + DL 51.8
 - 评价: 清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。
 
 #### test_samples\formats\sample.jpg (formats)
 - 综合分: **67.7** (C 一般)
-- 耗时: 306.5 ms
+- 耗时: 285.2 ms
 - 维度: {'sharpness': 73.5, 'exposure': 95.9, 'noise': 95.8, 'contrast': 70.7, 'deep_learning': 51.1}
 - 融合: 传统 84.255 + DL 51.1
 - 评价: 清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。
 
 #### test_samples\formats\sample.heic (formats)
 - 综合分: **68.0** (C 一般)
-- 耗时: 378.3 ms
+- 耗时: 333.3 ms
 - 维度: {'sharpness': 71.0, 'exposure': 95.9, 'noise': 96.1, 'contrast': 70.7, 'deep_learning': 52.5}
 - 融合: 传统 83.455 + DL 52.5
 - 评价: 清晰度：轻度模糊；曝光：曝光正常；噪点：噪点极低；对比度：对比度良好；深度学习画质：画质偏差。

@@ -1,6 +1,6 @@
 # AI 图像画质分析工具
 
-移动端图片选择与画质评估工具，Android 打包版稳定支持 **JPEG / PNG / WebP** 三种常见格式；桌面开发环境安装 `pillow-heif` 后可额外支持 **HEIC**。核心评分基于传统计算机视觉算法（OpenCV），无需深度学习模型与联网；深度学习评分与 Gemini 识图仅作为可选加分功能。
+移动端图片选择与画质评估工具，Android 打包版稳定支持 **JPEG / PNG / WebP** 三种常见格式；桌面开发环境安装 `pillow-heif` 后可额外支持 **HEIC**。核心评分基于传统计算机视觉算法（OpenCV），深度学习功能（若电脑有有关库则可本地运行，在Android端需要远程连接个人aliyun服务器以获取计算支持），ai识图（需要输入gemini的api）。
 
 ## 目标
 
@@ -77,6 +77,16 @@ python build_apk.py
 APK 已配置以下权限（`pyproject.toml`）：
 - `android.permission.READ_MEDIA_IMAGES` — 读取相册图片
 - `photo_library` — Flet FilePicker 所需
+
+## 开发复盘与能力体现 (项目亮点)
+
+1. **热爱愿力 (持续投入与死磕精神)**：
+   - 本项目超越了基础作业要求，**非作业项目维度的投入**：我不仅实现了传统的 CV 算法，还深入钻研了并集成了无参考图像质量评价（NR-IQA）的深度学习模型（`pyiqa`），以及 Gemini API 的自然语言点评（见 `src/analyzer/dl_scorer.py` 与 `ai_analyzer.py`）。
+   - **遇困复盘并坚持**：在移动端打包时，由于 Flet 官方对某些 C 扩展库（如 `pillow-heif`）支持不佳，我没有选择放弃，而是构建了降级兜底方案，并单独编写了 `build_apk.py` 实现资源的无痕过滤与一键构建。
+
+2. **学习能力 (方法论与跨端框架速成)**：
+   - 面对全新且要求苛刻的移动端打包任务，我没有依赖现成枯燥的教程，而是快速掌握了基于 Flutter 架构的 Flet 跨端框架（**极短时间做出了可用的移动端 Demo**）。
+   - 在算法调优上，展现了**举一反三**的能力：针对 Laplacian 遇到噪点就失效的痛点，快速学习并复现了 Immerkaer 高通滤波噪点估计算法，用交叉相乘惩罚成功压制了反例的虚高得分。
 
 ## 项目结构
 
